@@ -7,11 +7,12 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
+	"strings"
 )
 
 type set map[string]struct{}
 
-var filenames = make(set)
 var includedFiles = make(map[string]set)
 
 func main() {
@@ -32,7 +33,13 @@ func main() {
 	}
 	for line, n := range counts {
 		if n > 1 {
-			fmt.Printf("%d\t%s\t\n", n, line)
+			var filenames []string
+			filenameSet := includedFiles[line]
+			for filename := range filenameSet {
+				filenames = append(filenames, filename)
+			}
+			sort.Strings(filenames)
+			fmt.Printf("%d\t%s\t%s\n", n, line, strings.Join(filenames, " "))
 		}
 	}
 }
@@ -42,7 +49,12 @@ func countLines(f *os.File, counts map[string]int, filename string) {
 	for input.Scan() {
 		line := input.Text()
 		counts[line]++
-
+		filenames := includedFiles[line]
+		if filenames == nil {
+			filenames = make(set)
+		}
+		filenames[filename] = struct{}{}
+		includedFiles[line] = filenames
 	}
 	// NOTE: ignoring potential errors from input.Err()
 }
