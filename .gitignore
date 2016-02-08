@@ -26,7 +26,4 @@ _testmain.go
 .DS_Store
 
 # VScode
-.vscode
 debug
-launch.json
-settings.json
