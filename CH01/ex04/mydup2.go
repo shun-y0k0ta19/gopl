@@ -49,12 +49,9 @@ func countLines(f *os.File, counts map[string]int, filename string) {
 	for input.Scan() {
 		line := input.Text()
 		counts[line]++
-		filenames := includedFiles[line]
-		if filenames == nil {
-			filenames = make(set)
+		if includedFiles[line] == nil {
+			includedFiles[line] = make(set)
 		}
-		filenames[filename] = struct{}{}
-		includedFiles[line] = filenames
+		includedFiles[line][filename] = struct{}{}
 	}
-	// NOTE: ignoring potential errors from input.Err()
 }
