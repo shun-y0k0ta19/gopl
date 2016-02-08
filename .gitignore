@@ -24,3 +24,9 @@ _testmain.go
 *.prof
 
 .DS_Store
+
+# VScode
+.vscode
+debug
+launch.json
+settings.json
