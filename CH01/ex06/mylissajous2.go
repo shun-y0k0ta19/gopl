@@ -13,20 +13,13 @@ import (
 	"image/color"
 	"image/gif"
 	"io"
+	"log"
 	"math"
 	"math/rand"
-	"os"
-)
-
-//!-main
-// Packages not needed by version in book.
-import (
-	"log"
 	"net/http"
+	"os"
 	"time"
 )
-
-//!+main
 
 var palette = []color.Color{
 	color.RGBA{0x00, 0x00, 0x00, 0xff},
