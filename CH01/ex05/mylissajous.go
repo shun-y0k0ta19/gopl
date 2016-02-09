@@ -1,11 +1,6 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+// Author: "Shun Yokota"
+// Copyright © 2016 RICOH Co, Ltd. All rights reserved
 
-// Run with "web" command-line argument for web server.
-// See page 13.
-//!+main
-
-// Lissajous generates GIF animations of random Lissajous figures.
 package main
 
 import (
@@ -13,10 +8,8 @@ import (
 	"image/color"
 	"image/gif"
 	"io"
-	"log"
 	"math"
 	"math/rand"
-	"net/http"
 	"os"
 	"time"
 )
@@ -29,23 +22,7 @@ const (
 )
 
 func main() {
-	//!-main
-	// The sequence of images is deterministic unless we seed
-	// the pseudo-random number generator using the current time.
-	// Thanks to Randall McPherson for pointing out the omission.
 	rand.Seed(time.Now().UTC().UnixNano())
-
-	if len(os.Args) > 1 && os.Args[1] == "web" {
-		//!+http
-		handler := func(w http.ResponseWriter, r *http.Request) {
-			lissajous(w)
-		}
-		http.HandleFunc("/", handler)
-		//!-http
-		log.Fatal(http.ListenAndServe("localhost:8000", nil))
-		return
-	}
-	//!+main
 	lissajous(os.Stdout)
 }
 
@@ -75,5 +52,3 @@ func lissajous(out io.Writer) {
 	}
 	gif.EncodeAll(out, &anim) // NOTE: ignoring encoding errors
 }
-
-//!-main
