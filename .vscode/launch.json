@@ -38,7 +38,7 @@
 			"args": ["gopl.io"]
 		},
         {
-			"name": "Launch server3.go",
+			"name": "Launch lissajousServer.go",
 			"type": "go",
 			"request": "launch",
 			"mode": "debug",
