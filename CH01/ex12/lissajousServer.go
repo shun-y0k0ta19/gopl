@@ -63,6 +63,7 @@ func lissajous(out io.Writer, r *http.Request) {
 		delay, err = strconv.Atoi(param)
 	default:
 	}
+
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "lissajousServer: %v\n", err)
 	}
