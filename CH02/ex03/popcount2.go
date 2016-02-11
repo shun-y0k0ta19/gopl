@@ -13,9 +13,9 @@ func init() {
 
 //PopCount returns the population count (number of set bits) of x.
 func PopCount(x uint64) int {
-	var res int
+	var count int
 	for i := uint64(0); i < 8; i++ {
-		res += int(pc[byte(x>>(i*8))])
+		count += int(pc[byte(x>>(i*8))])
 	}
-	return res
+	return count
 }
