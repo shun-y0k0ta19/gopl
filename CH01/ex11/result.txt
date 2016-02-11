@@ -1,0 +1,19 @@
+y0k0ta19:ex10 y0k0ta19$ gor myfetchall.go gopl.io golang.org godoc.org google.co.jp yahoo.co.jp www.hokudai.ac.jp www.amazon.co.uk www.alexa.com/topsites google.com facebook.com youtube.com baidu.com yahoo.com amazon.com wikipedia.org github.com hokudai.ac.jp
+0.06s    36976  http://www.hokudai.ac.jp
+0.06s    19198  http://yahoo.co.jp
+0.10s    20753  http://google.com
+0.12s       81  http://baidu.com
+0.15s    19276  http://google.co.jp
+0.27s     4146  http://gopl.io
+0.34s     7839  http://golang.org
+0.55s    25687  http://www.alexa.com/topsites
+0.79s     6370  http://godoc.org
+0.86s   444760  http://youtube.com
+1.30s    70232  http://facebook.com
+1.34s    54537  http://wikipedia.org
+1.35s   280154  http://yahoo.com
+1.36s   429858  http://www.amazon.co.uk
+1.49s    24729  http://github.com
+1.57s   314361  http://amazon.com
+Get http://hokudai.ac.jp: dial tcp 133.87.1.132:80: i/o timeout
+30.01s elapsed
