@@ -43,7 +43,7 @@ func main() {
 	} else {
 		t, err := strconv.ParseFloat(param[0], 64)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "cf: %v\n", err)
+			fmt.Fprintf(os.Stderr, "unitconv: %v\n", err)
 			os.Exit(1)
 		}
 		c, mt, kg := unitconv(t)
