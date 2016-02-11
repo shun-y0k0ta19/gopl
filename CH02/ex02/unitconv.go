@@ -41,15 +41,13 @@ func main() {
 			fmt.Printf("%s %s %s\n", c, mt, kg)
 		}
 	} else {
-		t, err := strconv.ParseFloat(param[1], 64)
+		t, err := strconv.ParseFloat(param[0], 64)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "cf: %v\n", err)
 			os.Exit(1)
 		}
-		f := tempconv.Fahrenheit(t)
-		c := tempconv.Celsius(t)
-		fmt.Printf("%s = %s, %s = %s\n",
-			f, tempconv.FToC(f), c, tempconv.CToF(c))
+		c, mt, kg := unitconv(t)
+		fmt.Printf("%s %s %s\n", c, mt, kg)
 	}
 
 }
