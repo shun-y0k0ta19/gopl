@@ -1,0 +1,16 @@
+// Author: "Shun Yokota"
+// Copyright © 2016 RICOH Co, Ltd. All rights reserved
+
+package main
+
+import (
+	"fmt"
+	"golang_training/CH02/ex03/popcount2"
+)
+
+func main() {
+	fmt.Println(popcount2.PopCount(0))
+	fmt.Println(popcount2.PopCount(1))
+	fmt.Println(popcount2.PopCount(3))
+	fmt.Println(popcount2.PopCount(255))
+}
