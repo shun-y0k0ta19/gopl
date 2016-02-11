@@ -1,0 +1,17 @@
+Get http://fdas: dial tcp: lookup fdas: no such host
+0.06s    36976  http://www.hokudai.ac.jp
+0.10s    19197  http://yahoo.co.jp
+0.50s       81  http://baidu.com
+0.63s     4146  http://gopl.io
+0.82s    19300  http://google.com
+0.82s    19255  http://google.co.jp
+0.82s     7839  http://golang.org
+1.01s    25687  http://www.alexa.com/topsites
+1.14s    24729  http://github.com
+1.20s     6370  http://godoc.org
+1.30s   457234  http://www.amazon.co.uk
+1.39s   212912  http://amazon.com
+1.56s   443355  http://youtube.com
+1.79s   401787  http://yahoo.com
+1.84s    70231  http://facebook.com
+2.14s    54537  http://wikipedia.org
