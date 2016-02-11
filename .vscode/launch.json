@@ -53,7 +53,7 @@
 			"mode": "debug",
 			"program": "${workspaceRoot}/CH02/ex02",
 			"env": {},
-			"args": []
+			"args": ["32"]
 		}
 	]
 }
