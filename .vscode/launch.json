@@ -45,6 +45,15 @@
 			"program": "${workspaceRoot}/CH01/ex12",
 			"env": {},
 			"args": []
+		},
+        {
+			"name": "Launch unitconv.go",
+			"type": "go",
+			"request": "launch",
+			"mode": "debug",
+			"program": "${workspaceRoot}/CH02/ex02",
+			"env": {},
+			"args": []
 		}
 	]
 }
