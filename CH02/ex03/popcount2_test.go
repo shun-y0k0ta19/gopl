@@ -13,6 +13,7 @@ func TestPopcount2(t *testing.T) {
 	const (
 		bit0   = 0
 		bit1   = 1
+		bit10  = 2
 		bit255 = 8
 		bitF16 = 64
 	)
@@ -23,6 +24,10 @@ func TestPopcount2(t *testing.T) {
 	count = PopCount(1)
 	if count != bit1 {
 		t.Fatalf("Calculated value: %d Expected value: %d", count, bit1)
+	}
+	count = PopCount(10)
+	if count != bit10 {
+		t.Fatalf("Calculated value: %d Expected value: %d", count, bit10)
 	}
 	count = PopCount(255)
 	if count != bit255 {
