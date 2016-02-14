@@ -41,7 +41,7 @@ func trimLR(s, sep string) (left string, right string) {
 }
 
 func lissajous(out io.Writer, r *http.Request) {
-	uri := strings.Trim(r.RequestURI, "/?") //Query解析を使う HTMLquery
+	uri := strings.Trim(r.RequestURI, "/?") //Query解析を使う HTMLquery調べる
 	varname, param := trimLR(uri, "=")
 
 	cycles := 5   // number of complete x oscillator revolutions
