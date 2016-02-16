@@ -6,13 +6,13 @@ package tempconv2
 
 import "fmt"
 
-//Celsius is
+//Celsius is a type of celsius
 type Celsius float64
 
-//Fahrenheit is
+//Fahrenheit is a type of fahrenheit
 type Fahrenheit float64
 
-//Kelvin is
+//Kelvin is is a type of kelvin
 type Kelvin float64
 
 //AbsoluteZeroC is absolute zero in celsius
