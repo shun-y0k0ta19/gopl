@@ -42,7 +42,7 @@ func main() {
 
 func outputSVG(z zf) {
 	fmt.Printf("<svg xmlns='http://www.w3.org/2000/svg' "+
-		"style='stroke: grey; fill: white; stroke-width: 0.7' "+
+		"style='fill: white; stroke-width: 0.7' "+
 		"width='%d' height='%d'>", width, height)
 	for i := 0; i < cells; i++ {
 		for j := 0; j < cells; j++ {
@@ -53,7 +53,7 @@ func outputSVG(z zf) {
 			if isNaNa || isNaNb || isNaNc || isNaNd {
 				continue
 			}
-			fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g'/>\n",
+			fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='#FFFF00'/>\n",
 				ax, ay, bx, by, cx, cy, dx, dy)
 		}
 	}
