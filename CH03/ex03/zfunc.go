@@ -6,35 +6,33 @@ package main
 import "math"
 
 const (
-	a = 1
-	b = 0
-	c = 50
-    scale = 1.5
+	sinrrScale  = 1
+	eggboxScale = 0.5
+	mogulsScale = 0.5
+	saddleScale = 1.0
 )
 
 func sq(x float64) float64 {
 	return x * x
 }
 
-
 func sinrrZ(x, y float64) float64 {
 	r := math.Hypot(x, y) // distance from (0,0)
-
-	res := math.Sin(r) / r
-	return res
+	z := math.Sin(r) / r
+	return z * sinrrScale
 }
 
 func eggboxZ(x, y float64) float64 {
-	return (math.Sin(x) + math.Sin(y)) / 6
+	z := (math.Sin(x) + math.Sin(y)) / 2 //normalize -1.0 to 1.0
+	return z * eggboxScale
 }
 
-func mogulZ(x, y float64) float64 {
-	//return (math.Exp(-sq(x-b)/c) * math.Exp(-sq(y-b)/c)) / a
-	return (math.Sin(x) * math.Sin(y)) / 4
+func mogulsZ(x, y float64) float64 {
+	z := (math.Sin(x) * math.Sin(y)) //normalize -1.0 to 1.0
+	return z * mogulsScale
 }
-
-
 
 func saddleZ(x, y float64) float64 {
-	return (-sq(x/xyrange*scale) + sq(y/xyrange*scale))
+	z := -sq(x/(xyrange*0.5)) + sq(y/(xyrange*0.5)) //normalize -1.0 to 1.0
+	return z * saddleScale
 }

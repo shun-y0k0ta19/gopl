@@ -10,14 +10,15 @@ import (
 )
 
 const (
-	width, height = 600, 320            // canvas size in pixels
+	width, height = 900, 600            // canvas size in pixels
 	cells         = 100                 // number of grid cells
 	xyrange       = 30.0                // axis ranges (-xyrange..+xyrange)
-	xyscale       = width / 2 / xyrange // pixels per x or y unit
-	zscale        = height * 0.4        // pixels per z unit
+	xyscale       = width / 3 / xyrange // pixels per x or y unit
+	zscale        = height * 0.2        // pixels per z unit
 	angle         = math.Pi / 6         // angle of x, y axes (=30°)
 )
 
+//return z value normalized -1.0 to 1.0
 type zf func(float64, float64) float64
 
 var sin30, cos30 = math.Sin(angle), math.Cos(angle) // sin(30°), cos(30°)
@@ -30,7 +31,7 @@ func main() {
 		case "eggbox":
 			outputSVG(eggboxZ)
 		case "moguls":
-			outputSVG(mogulZ)
+			outputSVG(mogulsZ)
 		case "saddle":
 			outputSVG(saddleZ)
 		default:
@@ -53,9 +54,9 @@ func outputSVG(z zf) {
 			if isNaNa || isNaNb || isNaNc || isNaNd {
 				continue
 			}
-			z := int((za + zb + zc + zd) / 4 * zscale)
-			color := (z << 16) & (z - 255)
-			fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='#%X'/>\n",
+			aveZ := int((za + zb + zc + zd) / 4 * 255)
+			color := (aveZ << 16) + (255 - aveZ)
+			fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='#%06X'/>\n",
 				ax, ay, bx, by, cx, cy, dx, dy, color)
 		}
 	}
@@ -75,7 +76,8 @@ func corner(i, j int, f zf) (sx float64, sy float64, z float64, isNaN bool) {
 	sx = width/2 + (x-y)*cos30*xyscale
 	sy = height/2 + (x+y)*sin30*xyscale - z*zscale
 
-	return sx, sy, z, isNaN
+	//(z+1)/2 shift normalized z (-1.0 to 1.0) to (0.0 to 1.0)
+	return sx, sy, (z + 1) / 2, isNaN
 }
 
 func xy(i, j int) (x, y float64) {
