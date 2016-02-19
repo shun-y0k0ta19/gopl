@@ -7,19 +7,19 @@ import "testing"
 
 func testF(t *testing.T, calculatedF Fahrenheit, expectedF Fahrenheit) {
 	if calculatedF != expectedF {
-		t.Fatalf("Calculated value: %g Expected value: %g", calculatedF, expectedF)
+		t.Errorf("Calculated value: %g Expected value: %g", calculatedF, expectedF)
 	}
 }
 
 func testC(t *testing.T, calculatedC Celsius, expectedC Celsius) {
 	if calculatedC != expectedC {
-		t.Fatalf("Calculated value: %g Expected value: %g", calculatedC, expectedC)
+		t.Errorf("Calculated value: %g Expected value: %g", calculatedC, expectedC)
 	}
 }
 
 func testK(t *testing.T, calculatedK Kelvin, expectedK Kelvin) {
 	if calculatedK != expectedK {
-		t.Fatalf("Calculated value: %g Expected value: %g", calculatedK, expectedK)
+		t.Errorf("Calculated value: %g Expected value: %g", calculatedK, expectedK)
 	}
 }
 
@@ -32,11 +32,11 @@ const (
 
 func TestCToX(t *testing.T) {
 	convertedF := CToF(FreezingC)
-	testF(t, convertedF, freezingF)
+	testF(t, convertedF+1, freezingF)
 	convertedF = CToF(BoilingC)
 	testF(t, convertedF, boilingF)
 	convertedK := CToK(FreezingC)
-	testK(t, convertedK, freezingK)
+	testK(t, convertedK+1, freezingK)
 	convertedK = CToK(BoilingC)
 	testK(t, convertedK, boilingK)
 }
