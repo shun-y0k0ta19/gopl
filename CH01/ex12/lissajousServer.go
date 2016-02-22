@@ -15,7 +15,6 @@ import (
 	"net/http"
 	"os"
 	"strconv"
-	"strings"
 )
 
 var palette = []color.Color{color.RGBA{0x00, 0x00, 0x00, 0xff}, color.RGBA{0x00, 0xff, 0x00, 0xff}}
@@ -33,11 +32,6 @@ func main() {
 // handler echoes the HTTP request.
 func handler(w http.ResponseWriter, r *http.Request) {
 	lissajous(w, r)
-}
-
-func trimLR(s, sep string) (left string, right string) {
-	nameAndParam := strings.Split(s, sep)
-	return nameAndParam[0], nameAndParam[1]
 }
 
 func lissajous(out io.Writer, r *http.Request) {
