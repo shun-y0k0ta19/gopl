@@ -41,6 +41,8 @@ func trimLR(s, sep string) (left string, right string) {
 }
 
 func lissajous(out io.Writer, r *http.Request) {
+	query := r.URL.Query()
+	fmt.Println(query)
 	uri := strings.Trim(r.RequestURI, "/?") //Query解析を使う HTMLquery調べる
 	varname, param := trimLR(uri, "=")
 
