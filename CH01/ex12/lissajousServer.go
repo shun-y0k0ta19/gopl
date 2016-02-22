@@ -42,9 +42,6 @@ func trimLR(s, sep string) (left string, right string) {
 
 func lissajous(out io.Writer, r *http.Request) {
 	query := r.URL.Query()
-	fmt.Println(query)
-	uri := strings.Trim(r.RequestURI, "/?") //Query解析を使う HTMLquery調べる
-	varname, param := trimLR(uri, "=")
 
 	cycles := 5   // number of complete x oscillator revolutions
 	res := 0.001  // angular resolution
@@ -52,22 +49,22 @@ func lissajous(out io.Writer, r *http.Request) {
 	nframes := 64 // number of animation frames
 	delay := 8    // delay between frames in 10ms units
 
-	var err error
-
-	switch varname {
-	case "cycles":
-		cycles, err = strconv.Atoi(param)
-	case "size":
-		size, err = strconv.Atoi(param)
-	case "nframes":
-		nframes, err = strconv.Atoi(param)
-	case "delay":
-		delay, err = strconv.Atoi(param)
-	default:
-	}
-
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "lissajousServer: %v\n", err)
+	for qname, qvalue := range query {
+		var err error
+		switch qname {
+		case "cycles":
+			cycles, err = strconv.Atoi(qvalue[0])
+		case "size":
+			size, err = strconv.Atoi(qvalue[0])
+		case "nframes":
+			nframes, err = strconv.Atoi(qvalue[0])
+		case "delay":
+			delay, err = strconv.Atoi(qvalue[0])
+		default:
+		}
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "lissajousServer: %v\n", err)
+		}
 	}
 
 	freq := rand.Float64() * 3.0 // relative frequency of y oscillator
