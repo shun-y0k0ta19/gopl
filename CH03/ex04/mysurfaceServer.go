@@ -52,16 +52,17 @@ func surface(out io.Writer, r *http.Request) {
 		default:
 		}
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "lissajousServer: %v\n", err)
+			fmt.Fprintf(os.Stderr, "mysurfaceServer: %v\n", err)
 		}
 	}
+	outputSVG(out, sinrrZ)
 
 }
 
-func outputSVG(z zf) {
-	fmt.Printf("<svg xmlns='http://www.w3.org/2000/svg' "+
+func outputSVG(out io.Writer, z zf) {
+	fmt.Fprintf(out, "<svg xmlns='http://www.w3.org/2000/svg' "+
 		"style='fill: white; stroke-width: 0.7' "+
-		"width='%d' height='%d'>", width, height)
+		"width='%d' height='%d'>\n", width, height)
 	for i := 0; i < cells; i++ {
 		for j := 0; j < cells; j++ {
 			ax, ay, za, isNaNa := corner(i+1, j, z)
@@ -73,11 +74,11 @@ func outputSVG(z zf) {
 			}
 			aveZ := int((za + zb + zc + zd) / 4 * 255)
 			color := (aveZ << 16) + (255 - aveZ)
-			fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='#%06X'/>\n",
+			fmt.Fprintf(out, "<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='#%06X'/>\n",
 				ax, ay, bx, by, cx, cy, dx, dy, color)
 		}
 	}
-	fmt.Println("</svg>")
+	fmt.Fprintln(out, "</svg>")
 }
 
 func corner(i, j int, f zf) (sx float64, sy float64, z float64, isNaN bool) {
@@ -98,7 +99,7 @@ func corner(i, j int, f zf) (sx float64, sy float64, z float64, isNaN bool) {
 }
 
 func xy(i, j int) (x, y float64) {
-	x = xyrange * (float64(i/cells) - 0.5)
-	y = xyrange * (float64(j/cells) - 0.5)
+	x = xyrange * (float64(i)/float64(cells) - 0.5)
+	y = xyrange * (float64(j)/float64(cells) - 0.5)
 	return x, y
 }
