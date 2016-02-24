@@ -54,6 +54,15 @@
 			"program": "${workspaceRoot}/CH02/ex02",
 			"env": {},
 			"args": ["35"]
+		},
+        {
+			"name": "Launch mysurfaceServer.go",
+			"type": "go",
+			"request": "launch",
+			"mode": "debug",
+			"program": "${workspaceRoot}/CH03/ex04",
+			"env": {},
+			"args": []
 		}
 	]
 }
