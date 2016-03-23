@@ -35,16 +35,33 @@ func main() {
 	latestNum := getLatestNum()
 	fetchAllNewJSON(latestNum)
 
+	args := os.Args[1:]
+	for _, index := range args {
+		num, err := strconv.Atoi(index)
+		if err != nil {
+			fmt.Println("Atoi :" + err.Error())
+		}
+		if jsonIsExisting(num) {
+			jsonData, err := ioutil.ReadFile("json/" + index + ".json")
+			if err != nil {
+				fmt.Println("JSON ReadFile :" + err.Error())
+			}
+			var result xkcdJSON
+			if err := json.Unmarshal(jsonData, &result); err != nil {
+				fmt.Println("Unmarshal :" + err.Error())
+			}
+			fmt.Printf("\n----------------------------------\nURL :https://xkcd.com/%d/info.0.json\ntranscript :%s\n", result.Num, result.Transcript)
+		}
+	}
+
 }
 
 func fetchAllNewJSON(latest int) {
 	fmt.Printf("fetchall :%d\n", latest)
-	//ch := make(chan int, 5)
 	ctl := make(chan int, 50)
 	notify := make(chan int)
 	var cachedNum int
 	for i := 1; i <= latest; i++ {
-		//go jsonCrawler(i, ch)
 		if jsonIsExisting(i) {
 			cachedNum++
 			continue
@@ -53,14 +70,6 @@ func fetchAllNewJSON(latest int) {
 	}
 	for cachedNum < latest {
 		cachedNum += <-notify
-	}
-}
-
-func jsonCrawler(jsonNum int, ch chan<- int) {
-	if jsonIsExisting(jsonNum) {
-		ch <- 0
-	} else {
-		ch <- jsonNum
 	}
 }
 
@@ -78,7 +87,6 @@ func parallelFetch(fetchNum int, ctl chan int, notify chan<- int) {
 func getLatestNum() int {
 	url := "https://xkcd.com/info.0.json"
 	return fetchxkcdJSON(url).Num
-
 }
 
 func jsonIsExisting(latest int) bool {
@@ -112,7 +120,6 @@ func cachexkcdJSON(result xkcdJSON) {
 	}
 	path := "json/" + strconv.Itoa(num) + ".json"
 	jsonData, err := json.Marshal(result)
-
 	if err = ioutil.WriteFile(path, jsonData, 0644); err != nil {
 		fmt.Println("WriteFIle :" + err.Error())
 	}
