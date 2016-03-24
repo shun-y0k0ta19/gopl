@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"strings"
 )
 
 type xkcdJSON struct {
@@ -32,61 +33,85 @@ func main() {
 		}
 		fmt.Println("mkdir json!!!")
 	}
-	latestNum := getLatestNum()
-	fetchAllNewJSON(latestNum)
+	//latestNum := getLatestNum()
+	//fetchJSONs(1, latestNum)
 
 	args := os.Args[1:]
 	for _, index := range args {
-		num, err := strconv.Atoi(index)
-		if err != nil {
-			fmt.Println("Atoi :" + err.Error())
-		}
-		if jsonIsExisting(num) {
-			jsonData, err := ioutil.ReadFile("json/" + index + ".json")
+		if strings.Contains(index, "-") {
+			nums := strings.Split(index, "-")
+			begin, err := strconv.Atoi(nums[0])
 			if err != nil {
-				fmt.Println("JSON ReadFile :" + err.Error())
+				fmt.Println("begin Atoi :" + err.Error())
 			}
-			var result xkcdJSON
-			if err := json.Unmarshal(jsonData, &result); err != nil {
-				fmt.Println("Unmarshal :" + err.Error())
+			end, err := strconv.Atoi(nums[1])
+			if err != nil {
+				fmt.Println("end Atoi :" + err.Error())
 			}
-			fmt.Printf("\n----------------------------------\nURL :https://xkcd.com/%d/info.0.json\ntranscript :%s\n", result.Num, result.Transcript)
+			if begin > end {
+				begin, end = end, begin
+			}
+			fetchJSONs(begin, end)
+			for i := begin; i <= end; i++ {
+				showURLandTranscript(i)
+			}
+		} else {
+			num, err := strconv.Atoi(index)
+			if err != nil {
+				fmt.Println("Atoi :" + err.Error())
+			}
+			fetchJSONs(num, num)
+			showURLandTranscript(num)
 		}
 	}
 
 }
 
-func fetchAllNewJSON(latest int) {
-	fmt.Printf("fetchall :%d\n", latest)
-	ctl := make(chan int, 50)
+func showURLandTranscript(num int) {
+	index := strconv.Itoa(num)
+	jsonData, err := ioutil.ReadFile("json/" + index + ".json")
+	if err != nil {
+		fmt.Println("JSON ReadFile :" + err.Error())
+	}
+	var result xkcdJSON
+	if err := json.Unmarshal(jsonData, &result); err != nil {
+		fmt.Println("Unmarshal :" + err.Error())
+	}
+	fmt.Printf("\n----------------------------------\nURL :https://xkcd.com/%d/info.0.json\ntranscript :%s\n", result.Num, result.Transcript)
+
+}
+
+func fetchJSONs(begin, end int) {
+	fmt.Printf("fetchall :%d\n", end)
+	pool := make(chan int, 50)
 	notify := make(chan int)
 	var cachedNum int
-	for i := 1; i <= latest; i++ {
+	for i := begin; i <= end; i++ {
 		if jsonIsExisting(i) {
 			cachedNum++
 			continue
 		}
-		go parallelFetch(i, ctl, notify)
+		go parallelFetch(i, pool, notify)
 	}
-	for cachedNum < latest {
+	for cachedNum <= end-begin {
 		cachedNum += <-notify
 	}
 }
 
-func parallelFetch(fetchNum int, ctl chan int, notify chan<- int) {
-	ctl <- 1
+func parallelFetch(fetchNum int, pool chan int, notify chan<- int) {
+	pool <- 1
 	if fetchNum != 0 {
 		url := "https://xkcd.com/" + strconv.Itoa(fetchNum) + "/info.0.json"
 		fmt.Println("fetch :" + url)
 		cachexkcdJSON(fetchxkcdJSON(url))
 	}
 	notify <- 1
-	<-ctl
+	<-pool
 }
 
 func getLatestNum() int {
-	url := "https://xkcd.com/info.0.json"
-	return fetchxkcdJSON(url).Num
+	req := "https://xkcd.com/info.0.json"
+	return fetchxkcdJSON(req).Num
 }
 
 func jsonIsExisting(latest int) bool {
@@ -97,8 +122,8 @@ func jsonIsExisting(latest int) bool {
 	return false
 }
 
-func fetchxkcdJSON(url string) xkcdJSON {
-	resp, err := http.Get(url)
+func fetchxkcdJSON(req string) xkcdJSON {
+	resp, err := http.Get(req)
 	if err != nil {
 		fmt.Println("http.Get :" + err.Error())
 	}
@@ -124,6 +149,4 @@ func cachexkcdJSON(result xkcdJSON) {
 		fmt.Println("WriteFIle :" + err.Error())
 	}
 	fmt.Println("cached :" + path)
-	//	jsonData, err = json.MarshalIndent(result, "", " ")
-	//	fmt.Printf("%s\n", jsonData)
 }
