@@ -92,9 +92,9 @@ func average(source image.Image, px int, py int) color.Color {
 		sb += b
 	}
 	return color.RGBA{
-		uint8(sr / 4),
-		uint8(sg / 4),
-		uint8(sb / 4),
+		uint8(sr >> 8 / 4),
+		uint8(sg >> 8 / 4),
+		uint8(sb >> 8 / 4),
 		255,
 	}
 }
