@@ -14,7 +14,7 @@ import (
 
 func main() {
 	counts := make(map[rune]int)          // counts of Unicode characters
-	classfication := make(map[string]int) //counts of Unicode classification
+	classfication := make(map[string]int) // counts of Unicode classification
 	var utflen [utf8.UTFMax + 1]int       // count of lengths of UTF-8 encodings
 	invalid := 0                          // count of invalid UTF-8 characters
 

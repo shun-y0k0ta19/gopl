@@ -24,7 +24,8 @@ func anagram(s1 string, s2 string) bool {
 func main() {
 	fmt.Println(anagram("abc", "abc"))
 	fmt.Println(anagram("abc", "bac"))
-	fmt.Println(anagram("aabc", "baca"))
+	fmt.Println(anagram("aabcd", "baca"))
 	fmt.Println(anagram("aabca", "aabcaa"))
 	fmt.Println(anagram("aabcab", "aabcaa"))
+	fmt.Println(anagram("横田峻", "峻横田"))
 }

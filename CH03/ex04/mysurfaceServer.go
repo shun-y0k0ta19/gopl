@@ -85,7 +85,6 @@ func surface(out io.Writer, r *http.Request) {
 		}
 	}
 	outputSVG(out, saddleZ)
-
 }
 
 func outputSVG(out io.Writer, z zf) {

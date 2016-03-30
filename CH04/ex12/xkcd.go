@@ -83,7 +83,7 @@ func showURLandTranscript(num int) {
 
 func fetchJSONs(begin, end int) {
 	fmt.Printf("fetchall :%d\n", end)
-	pool := make(chan int, 50)
+	pool := make(chan struct{}, 50)
 	notify := make(chan int)
 	var cachedNum int
 	for i := begin; i <= end; i++ {
@@ -91,6 +91,7 @@ func fetchJSONs(begin, end int) {
 			cachedNum++
 			continue
 		}
+		pool <- struct{}{}
 		go parallelFetch(i, pool, notify)
 	}
 	for cachedNum <= end-begin {
@@ -98,8 +99,7 @@ func fetchJSONs(begin, end int) {
 	}
 }
 
-func parallelFetch(fetchNum int, pool chan int, notify chan<- int) {
-	pool <- 1
+func parallelFetch(fetchNum int, pool chan struct{}, notify chan<- int) {
 	if fetchNum != 0 {
 		url := "https://xkcd.com/" + strconv.Itoa(fetchNum) + "/info.0.json"
 		fmt.Println("fetch :" + url)

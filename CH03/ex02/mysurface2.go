@@ -37,7 +37,6 @@ func main() {
 			outputSVG(sinrrZ)
 		}
 	}
-
 }
 
 func outputSVG(z zf) {
