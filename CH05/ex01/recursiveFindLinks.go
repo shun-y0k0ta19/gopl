@@ -1,4 +1,4 @@
-// Copyright © 2016 "Shun Yokota"" All rights reserved
+// Copyright © 2016 "Shun Yokota" All rights reserved
 
 package main
 
@@ -56,7 +56,7 @@ func recursiveVisit(links []string, n *html.Node) []string {
 				}
 			}
 		}
-		links = recursiveVisit(recursiveVisit(links, n.NextSibling), n.FirstChild)
+		links = recursiveVisit(recursiveVisit(links, n.FirstChild), n.NextSibling)
 	}
 
 	return links

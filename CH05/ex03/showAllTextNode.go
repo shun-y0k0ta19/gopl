@@ -1,4 +1,4 @@
-// Copyright © 2016 "Shun Yokota"" All rights reserved
+// Copyright © 2016 "Shun Yokota" All rights reserved
 
 package main
 
