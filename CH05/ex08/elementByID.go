@@ -23,12 +23,36 @@ func main() {
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "html.Parse: %v", err)
 	}
-	ElementByID(doc, id)
+	node, err := ElementByID(doc, id)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	for _, attr := range node.Attr {
+		fmt.Printf("key: %s, value: %s\n", attr.Key, attr.Val)
+	}
 }
 
 //ElementByID return html node that found by ID at first
-func ElementByID(doc *html.Node, id string) *html.Node {
-	return doc
+func ElementByID(doc *html.Node, id string) (*html.Node, error) {
+	var idElement *html.Node
+	var findElement func(n *html.Node) bool
+	findElement = func(n *html.Node) bool {
+		for _, attr := range n.Attr {
+			if attr.Key == "id" && attr.Val == id {
+				idElement = n
+				return true
+			}
+		}
+		return false
+	}
+	forEachNode(doc, findElement, findElement)
+	var err error
+	if idElement == nil {
+		err = fmt.Errorf("id=%s is not found.\n", id)
+	}
+
+	return idElement, err
 }
 
 // forEachNode calls the functions pre(x) and post(x) for each node
@@ -55,32 +79,4 @@ func forEachNode(n *html.Node, pre, post func(n *html.Node) bool) bool {
 		}
 	}
 	return done
-}
-
-var depth int
-
-func startElement(n *html.Node) {
-	var attributes []string
-	if n.Type == html.ElementNode {
-		for _, attr := range n.Attr {
-			s := fmt.Sprintf(" %s=\"%s\"", attr.Key, attr.Val)
-			attributes = append(attributes, s)
-		}
-		fmt.Printf("%*s<%s", depth*2, "", n.Data)
-		for _, attr := range attributes {
-			fmt.Print(attr)
-		}
-		if n.FirstChild == nil {
-			fmt.Print("/")
-		}
-		fmt.Println(">")
-		depth++
-	}
-}
-
-func endElement(n *html.Node) {
-	if n.Type == html.ElementNode {
-		depth--
-		fmt.Printf("%*s</%s>\n", depth*2, "", n.Data)
-	}
 }
