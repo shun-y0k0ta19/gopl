@@ -34,24 +34,17 @@ func main() {
 
 func topoSort(m map[string]strSet) []string {
 	var order []string
-	determine := make(strSet)
 	seen := make(strSet)
-	var visitAll func(items strSet) error
+	var visitAll func(items strSet)
 
-	visitAll = func(items strSet) error {
+	visitAll = func(items strSet) {
 		for item := range items {
 			if !seen[item] {
 				seen[item] = true
-				if err := visitAll(m[item]); err != nil {
-					return err
-				}
+				visitAll(m[item])
 				order = append(order, item)
-				determine[item] = false
-			} else if _, ok := determine[item]; !ok {
-				return fmt.Errorf("circuration at %s", item)
 			}
 		}
-		return nil
 	}
 
 	keys := make(strSet)
