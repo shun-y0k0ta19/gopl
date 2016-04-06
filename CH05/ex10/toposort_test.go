@@ -7,6 +7,7 @@ import (
 	"testing"
 )
 
+//test1
 func TestTopologicalOrder(t *testing.T) {
 	orderMap := make(map[string]int)
 	for i, course := range topoSort(prereqs) {
@@ -27,6 +28,14 @@ func TestTopologicalOrder(t *testing.T) {
 	}
 }
 
+//test2
+func Test100TimesRepeatTopologicalOrder(t *testing.T) {
+	for i := 0; i < 100; i++ {
+		topoOrderTest(t)
+	}
+	fmt.Println("done 100 times topoOrderTest")
+}
+
 func topoOrderTest(t *testing.T) {
 	orderMap := make(map[string]int)
 	for i, course := range topoSort(prereqs) {
@@ -42,12 +51,4 @@ func topoOrderTest(t *testing.T) {
 			}
 		}
 	}
-
-}
-
-func Test100TimesRepeatTopologicalOrder(t *testing.T) {
-	for i := 0; i < 100; i++ {
-		topoOrderTest(t)
-	}
-	fmt.Println("done 100 times topoOrderTest")
 }
