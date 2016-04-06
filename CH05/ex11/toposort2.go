@@ -27,24 +27,33 @@ var prereqs = map[string]strSet{
 }
 
 func main() {
-	for i, course := range topoSort(prereqs) {
-		fmt.Printf("%d:\t%s\n", i+1, course)
+	if order, err := topoSort(prereqs); err != nil {
+		for i, course := range order {
+			fmt.Printf("%d:\t%s\n", i+1, course)
+		}
 	}
 }
 
-func topoSort(m map[string]strSet) []string {
+func topoSort(m map[string]strSet) ([]string, error) {
 	var order []string
+	determine := make(strSet)
 	seen := make(strSet)
-	var visitAll func(items strSet)
+	var visitAll func(items strSet) error
 
-	visitAll = func(items strSet) {
+	visitAll = func(items strSet) error {
 		for item := range items {
 			if !seen[item] {
 				seen[item] = true
-				visitAll(m[item])
+				if err := visitAll(m[item]); err != nil {
+					return err
+				}
 				order = append(order, item)
+				determine[item] = false
+			} else if _, ok := determine[item]; !ok {
+				return fmt.Errorf("circuration at %s", item)
 			}
 		}
+		return nil
 	}
 
 	keys := make(strSet)
@@ -52,6 +61,6 @@ func topoSort(m map[string]strSet) []string {
 		keys[key] = false
 	}
 
-	visitAll(keys)
-	return order
+	err := visitAll(keys)
+	return order, err
 }
