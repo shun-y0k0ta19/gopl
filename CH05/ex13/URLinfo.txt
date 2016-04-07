@@ -1,0 +1,3015 @@
+https://golang.org
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /project/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /project/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /help/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /help/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://play.golang.org/
+Scheme: http
+Oaque: 
+Host: play.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //tour.golang.org/
+Scheme: https
+Oaque: 
+Host: tour.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://golang.org/dl/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /dl/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //blog.golang.org/
+Scheme: https
+Oaque: 
+Host: blog.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://developers.google.com/site-policies#restrictions
+Scheme: https
+Oaque: 
+Host: developers.google.com
+Path: /site-policies
+RawPath: 
+RawQuery: 
+Fragment: restrictions
+a.Val: /LICENSE
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /LICENSE
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/tos.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/tos.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://www.google.com/intl/en/policies/privacy/
+Scheme: http
+Oaque: 
+Host: www.google.com
+Path: /intl/en/policies/privacy/
+RawPath: 
+RawQuery: 
+Fragment: 
+https://golang.org/
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /project/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /project/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /help/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /help/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://play.golang.org/
+Scheme: http
+Oaque: 
+Host: play.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //tour.golang.org/
+Scheme: https
+Oaque: 
+Host: tour.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://golang.org/dl/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /dl/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //blog.golang.org/
+Scheme: https
+Oaque: 
+Host: blog.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://developers.google.com/site-policies#restrictions
+Scheme: https
+Oaque: 
+Host: developers.google.com
+Path: /site-policies
+RawPath: 
+RawQuery: 
+Fragment: restrictions
+a.Val: /LICENSE
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /LICENSE
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/tos.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/tos.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://www.google.com/intl/en/policies/privacy/
+Scheme: http
+Oaque: 
+Host: www.google.com
+Path: /intl/en/policies/privacy/
+RawPath: 
+RawQuery: 
+Fragment: 
+https://golang.org/doc/
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /project/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /project/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /help/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /help/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://play.golang.org/
+Scheme: http
+Oaque: 
+Host: play.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/install
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/install
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //tour.golang.org/
+Scheme: https
+Oaque: 
+Host: tour.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //tour.golang.org/
+Scheme: https
+Oaque: 
+Host: tour.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //code.google.com/p/go-tour/
+Scheme: https
+Oaque: 
+Host: code.google.com
+Path: /p/go-tour/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: code.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/code.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //www.youtube.com/watch?v=XCsL89YtqCs
+Scheme: https
+Oaque: 
+Host: www.youtube.com
+Path: /watch
+RawPath: 
+RawQuery: v=XCsL89YtqCs
+Fragment: 
+a.Val: /cmd/go/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /cmd/go/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: effective_go.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/effective_go.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/faq
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/faq
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki/Learn
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki/Learn
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/cmd
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/cmd
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /ref/spec
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /ref/spec
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /ref/mem
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /ref/mem
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/devel/release.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/devel/release.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //blog.golang.org/
+Scheme: https
+Oaque: 
+Host: blog.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/codewalk/functions
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/codewalk/functions
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/codewalk/markov
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/codewalk/markov
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/codewalk/sharemem
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/codewalk/sharemem
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/articles/wiki/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/articles/wiki/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/json-rpc-tale-of-interfaces
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/json-rpc-tale-of-interfaces
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/gos-declaration-syntax
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/gos-declaration-syntax
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/defer-panic-and-recover
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/defer-panic-and-recover
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/go-concurrency-patterns-timing-out-and
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/go-concurrency-patterns-timing-out-and
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/go-slices-usage-and-internals
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/go-slices-usage-and-internals
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/gif-decoder-exercise-in-go-interfaces
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/gif-decoder-exercise-in-go-interfaces
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/error-handling-and-go
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/error-handling-and-go
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/organizing-go-code
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/organizing-go-code
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/json-and-go
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/json-and-go
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/encoding/json/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/json/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/gobs-of-data
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/gobs-of-data
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/encoding/gob/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/gob/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/laws-of-reflection
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/laws-of-reflection
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/reflect/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/reflect/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/go-image-package
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/go-image-package
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/image/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/go-imagedraw-package
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/go-imagedraw-package
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/image/draw/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/draw/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/articles/go_command.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/articles/go_command.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/c-go-cgo
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/c-go-cgo
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /cmd/cgo/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /cmd/cgo/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/gdb
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/gdb
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/godoc-documenting-go-code
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/godoc-documenting-go-code
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /cmd/godoc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /cmd/godoc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/profiling-go-programs
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/profiling-go-programs
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/articles/race_detector.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/articles/race_detector.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/race-detector
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/race-detector
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/asm
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/asm
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki/Articles
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki/Articles
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://research.swtch.com/gotour
+Scheme: http
+Oaque: 
+Host: research.swtch.com
+Path: /gotour
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //vimeo.com/53221560
+Scheme: https
+Oaque: 
+Host: vimeo.com
+Path: /53221560
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //www.youtube.com/watch?v=f6kdp27TYZs
+Scheme: https
+Oaque: 
+Host: www.youtube.com
+Path: /watch
+RawPath: 
+RawQuery: v=f6kdp27TYZs
+Fragment: 
+a.Val: //www.youtube.com/watch?v=QDDwwePbDtw
+Scheme: https
+Oaque: 
+Host: www.youtube.com
+Path: /watch
+RawPath: 
+RawQuery: v=QDDwwePbDtw
+Fragment: 
+a.Val: /talks
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /talks
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki/GoTalks
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki/GoTalks
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki/NonEnglish
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki/NonEnglish
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://developers.google.com/site-policies#restrictions
+Scheme: https
+Oaque: 
+Host: developers.google.com
+Path: /site-policies
+RawPath: 
+RawQuery: 
+Fragment: restrictions
+a.Val: /LICENSE
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /LICENSE
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/tos.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/tos.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://www.google.com/intl/en/policies/privacy/
+Scheme: http
+Oaque: 
+Host: www.google.com
+Path: /intl/en/policies/privacy/
+RawPath: 
+RawQuery: 
+Fragment: 
+https://golang.org/pkg/
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /project/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /project/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /help/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /help/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://play.golang.org/
+Scheme: http
+Oaque: 
+Host: play.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #stdlib
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: stdlib
+a.Val: #other
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: other
+a.Val: #subrepo
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: subrepo
+a.Val: #community
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: community
+a.Val: archive/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/archive/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: archive/tar/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/archive/tar/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: archive/zip/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/archive/zip/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: bufio/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/bufio/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: builtin/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/builtin/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: bytes/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/bytes/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: compress/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/compress/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: compress/bzip2/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/compress/bzip2/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: compress/flate/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/compress/flate/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: compress/gzip/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/compress/gzip/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: compress/lzw/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/compress/lzw/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: compress/zlib/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/compress/zlib/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: container/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/container/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: container/heap/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/container/heap/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: container/list/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/container/list/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: container/ring/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/container/ring/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/aes/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/aes/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/cipher/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/cipher/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/des/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/des/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/dsa/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/dsa/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/ecdsa/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/ecdsa/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/elliptic/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/elliptic/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/hmac/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/hmac/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/md5/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/md5/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/rand/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/rand/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/rc4/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/rc4/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/rsa/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/rsa/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/sha1/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/sha1/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/sha256/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/sha256/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/sha512/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/sha512/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/subtle/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/subtle/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/tls/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/tls/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/x509/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/x509/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: crypto/x509/pkix/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/crypto/x509/pkix/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: database/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/database/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: database/sql/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/database/sql/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: database/sql/driver/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/database/sql/driver/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: debug/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/debug/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: debug/dwarf/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/debug/dwarf/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: debug/elf/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/debug/elf/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: debug/gosym/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/debug/gosym/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: debug/macho/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/debug/macho/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: debug/pe/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/debug/pe/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: debug/plan9obj/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/debug/plan9obj/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/ascii85/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/ascii85/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/asn1/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/asn1/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/base32/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/base32/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/base64/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/base64/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/binary/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/binary/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/csv/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/csv/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/gob/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/gob/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/hex/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/hex/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/json/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/json/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/pem/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/pem/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: encoding/xml/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/encoding/xml/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: errors/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/errors/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: expvar/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/expvar/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: flag/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/flag/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: fmt/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/fmt/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/ast/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/ast/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/build/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/build/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/constant/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/constant/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/doc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/format/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/format/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/importer/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/importer/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/parser/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/parser/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/printer/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/printer/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/scanner/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/scanner/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/token/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/token/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: go/types/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/go/types/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: hash/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/hash/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: hash/adler32/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/hash/adler32/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: hash/crc32/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/hash/crc32/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: hash/crc64/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/hash/crc64/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: hash/fnv/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/hash/fnv/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: html/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/html/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: html/template/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/html/template/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: image/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: image/color/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/color/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: image/color/palette/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/color/palette/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: image/draw/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/draw/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: image/gif/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/gif/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: image/jpeg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/jpeg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: image/png/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/image/png/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: index/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/index/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: index/suffixarray/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/index/suffixarray/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: io/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/io/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: io/ioutil/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/io/ioutil/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: log/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/log/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: log/syslog/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/log/syslog/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: math/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/math/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: math/big/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/math/big/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: math/cmplx/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/math/cmplx/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: math/rand/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/math/rand/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: mime/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/mime/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: mime/multipart/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/mime/multipart/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: mime/quotedprintable/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/mime/quotedprintable/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/http/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/http/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/http/cgi/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/http/cgi/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/http/cookiejar/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/http/cookiejar/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/http/fcgi/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/http/fcgi/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/http/httptest/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/http/httptest/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/http/httputil/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/http/httputil/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/http/pprof/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/http/pprof/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/mail/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/mail/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/rpc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/rpc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/rpc/jsonrpc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/rpc/jsonrpc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/smtp/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/smtp/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/textproto/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/textproto/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: net/url/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/net/url/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: os/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/os/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: os/exec/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/os/exec/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: os/signal/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/os/signal/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: os/user/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/os/user/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: path/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/path/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: path/filepath/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/path/filepath/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: reflect/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/reflect/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: regexp/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/regexp/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: regexp/syntax/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/regexp/syntax/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: runtime/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/runtime/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: runtime/cgo/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/runtime/cgo/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: runtime/debug/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/runtime/debug/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: runtime/msan/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/runtime/msan/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: runtime/pprof/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/runtime/pprof/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: runtime/race/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/runtime/race/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: runtime/trace/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/runtime/trace/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: sort/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/sort/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: strconv/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/strconv/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: strings/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/strings/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: sync/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/sync/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: sync/atomic/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/sync/atomic/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: syscall/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/syscall/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: testing/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/testing/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: testing/iotest/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/testing/iotest/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: testing/quick/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/testing/quick/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: text/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/text/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: text/scanner/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/text/scanner/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: text/tabwriter/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/text/tabwriter/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: text/template/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/text/template/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: text/template/parse/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/text/template/parse/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: time/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/time/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: unicode/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/unicode/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: unicode/utf16/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/unicode/utf16/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: unicode/utf8/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/unicode/utf8/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: unsafe/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/unsafe/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1compat
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1compat
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /cmd/go/#hdr-Download_and_install_packages_and_dependencies
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /cmd/go/
+RawPath: 
+RawQuery: 
+Fragment: hdr-Download_and_install_packages_and_dependencies
+a.Val: //godoc.org/golang.org/x/benchmarks
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/benchmarks
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/blog
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/blog
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //blog.golang.org
+Scheme: https
+Oaque: 
+Host: blog.golang.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/build
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/build
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //build.golang.org
+Scheme: https
+Oaque: 
+Host: build.golang.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/crypto
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/crypto
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/debug
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/debug
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/image
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/image
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/mobile
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/mobile
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/net
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/net
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/sys
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/sys
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/text
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/text
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/tools
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/tools
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/tour
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/tour
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //tour.golang.org
+Scheme: https
+Oaque: 
+Host: tour.golang.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org/golang.org/x/exp
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: /golang.org/x/exp
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //godoc.org
+Scheme: https
+Oaque: 
+Host: godoc.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://go-search.org
+Scheme: http
+Oaque: 
+Host: go-search.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki/Projects
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki/Projects
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://developers.google.com/site-policies#restrictions
+Scheme: https
+Oaque: 
+Host: developers.google.com
+Path: /site-policies
+RawPath: 
+RawQuery: 
+Fragment: restrictions
+a.Val: /LICENSE
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /LICENSE
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/tos.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/tos.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://www.google.com/intl/en/policies/privacy/
+Scheme: http
+Oaque: 
+Host: www.google.com
+Path: /intl/en/policies/privacy/
+RawPath: 
+RawQuery: 
+Fragment: 
+https://golang.org/project/
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /project/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /project/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /project/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /help/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /help/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://play.golang.org/
+Scheme: http
+Oaque: 
+Host: play.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //google.com/
+Scheme: https
+Oaque: 
+Host: google.com
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /CONTRIBUTORS
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /CONTRIBUTORS
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /LICENSE
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /LICENSE
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //groups.google.com/group/golang-announce
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-announce
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //groups.google.com/group/golang-announce
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-announce
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/devel/release.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/devel/release.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/devel/release.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/devel/release.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1.6
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1.6
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1.5
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1.5
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1.4
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1.4
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1.3
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1.3
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1.2
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1.2
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1.1
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1.1
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go1compat
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go1compat
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://golang.org/change
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /change
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-dev
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-dev
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-codereviews
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-codereviews
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-dev
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-dev
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-codereviews
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-codereviews
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-nuts
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-nuts
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-checkins
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-checkins
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //build.golang.org/
+Scheme: https
+Oaque: 
+Host: build.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //golang.org/issue
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /issue
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //golang.org/issue/new
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /issue/new
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //golang.org/issue
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /issue
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: mailto:security@golang.org
+Scheme: mailto
+Oaque: security@golang.org
+Host: 
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /security
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /security
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: mailto:conduct@golang.org
+Scheme: mailto
+Oaque: conduct@golang.org
+Host: 
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /conduct
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /conduct
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/contribute.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/contribute.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/contribute.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/contribute.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //golang.org/issue
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /issue
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://github.com/golang/go/issues?q=is%3Aopen+is%3Aissue+label%3Ahelpwanted
+Scheme: https
+Oaque: 
+Host: github.com
+Path: /golang/go/issues
+RawPath: 
+RawQuery: q=is%3Aopen+is%3Aissue+label%3Ahelpwanted
+Fragment: 
+a.Val: https://developers.google.com/site-policies#restrictions
+Scheme: https
+Oaque: 
+Host: developers.google.com
+Path: /site-policies
+RawPath: 
+RawQuery: 
+Fragment: restrictions
+a.Val: /LICENSE
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /LICENSE
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/tos.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/tos.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://www.google.com/intl/en/policies/privacy/
+Scheme: http
+Oaque: 
+Host: www.google.com
+Path: /intl/en/policies/privacy/
+RawPath: 
+RawQuery: 
+Fragment: 
+https://golang.org/help/
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: #
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /help/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /pkg/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /pkg/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /project/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /project/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /help/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /help/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /blog/
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /blog/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://play.golang.org/
+Scheme: http
+Oaque: 
+Host: play.golang.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-nuts
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-nuts
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-nuts
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-nuts
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/go_faq.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/go_faq.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //golang.org/wiki
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://forum.golangbridge.org/
+Scheme: https
+Oaque: 
+Host: forum.golangbridge.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://forum.golangbridge.org/
+Scheme: https
+Oaque: 
+Host: forum.golangbridge.org
+Path: /
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://blog.gopheracademy.com/gophers-slack-community/
+Scheme: https
+Oaque: 
+Host: blog.gopheracademy.com
+Path: /gophers-slack-community/
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: irc:irc.freenode.net/go-nuts
+Scheme: irc
+Oaque: irc.freenode.net/go-nuts
+Host: 
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/faq
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/faq
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-announce
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-announce
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://groups.google.com/group/golang-announce
+Scheme: https
+Oaque: 
+Host: groups.google.com
+Path: /group/golang-announce
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: //blog.golang.org
+Scheme: https
+Oaque: 
+Host: blog.golang.org
+Path: 
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://twitter.com/golang
+Scheme: https
+Oaque: 
+Host: twitter.com
+Path: /golang
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://plus.google.com/communities/114112804251407510571
+Scheme: https
+Oaque: 
+Host: plus.google.com
+Path: /communities/114112804251407510571
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://reddit.com/r/golang
+Scheme: https
+Oaque: 
+Host: reddit.com
+Path: /r/golang
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://reddit.com/r/golang
+Scheme: https
+Oaque: 
+Host: reddit.com
+Path: /r/golang
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki/GoUserGroups
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki/GoUserGroups
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /play
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /play
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /wiki
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /wiki
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /conduct
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /conduct
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: https://developers.google.com/site-policies#restrictions
+Scheme: https
+Oaque: 
+Host: developers.google.com
+Path: /site-policies
+RawPath: 
+RawQuery: 
+Fragment: restrictions
+a.Val: /LICENSE
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /LICENSE
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: /doc/tos.html
+Scheme: https
+Oaque: 
+Host: golang.org
+Path: /doc/tos.html
+RawPath: 
+RawQuery: 
+Fragment: 
+a.Val: http://www.google.com/intl/en/policies/privacy/
+Scheme: http
+Oaque: 
+Host: www.google.com
+Path: /intl/en/policies/privacy/
+RawPath: 
+RawQuery: 
+Fragment: 
+https://golang.org/blog/
