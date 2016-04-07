@@ -9,7 +9,6 @@ func main() {
 }
 
 func variadicJoin(sep string, a ...string) string {
-	fmt.Println(len(a))
 	if len(a) == 0 {
 		return ""
 	}
