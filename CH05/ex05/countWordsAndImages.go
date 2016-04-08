@@ -52,7 +52,6 @@ func countWordsAndImages(h *html.Node) (words, images int) {
 	textScanner := bufio.NewScanner(strings.NewReader(strings.Join(textList, " ")))
 	textScanner.Split(bufio.ScanWords)
 	for textScanner.Scan() {
-		//fmt.Println(textScanner.Text())
 		words++
 	}
 	return
@@ -60,24 +59,9 @@ func countWordsAndImages(h *html.Node) (words, images int) {
 
 func recursiveVisit(links []string, images int, n *html.Node) ([]string, int) {
 	if n != nil {
-		/*
-			fmt.Printf("n.Type : %d, TextNode :%d\n", n.Type, html.TextNode)
-			fmt.Printf("n.Namespace : %s\n", n.Namespace)
-			fmt.Printf("n.DataAtom : %x\n", n.DataAtom)
-			fmt.Printf("n.Attribute: %v\n", n.Attr)
-			fmt.Printf("n.Data: %s\n", n.Data)
-		*/
 		if n.Type == html.TextNode {
 			if n.Parent.Data != "script" && n.Parent.Data != "style" {
 				links = append(links, n.Data)
-				/*
-					                for _, r := range []rune(n.Data) {
-										if !unicode.IsSpace(r) {
-											links = append(links, n.Data)
-											break
-										}
-									}
-				*/
 			}
 		} else if n.Type == html.ElementNode {
 			if n.Data == "img" {
