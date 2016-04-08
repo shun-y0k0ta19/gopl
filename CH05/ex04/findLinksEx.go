@@ -28,12 +28,6 @@ func main() {
 
 func recursiveVisit(links []string, n *html.Node) []string {
 	if n != nil {
-		fmt.Printf("n.Type : %d, TextNode :%d\n", n.Type, html.TextNode)
-		fmt.Printf("n.Namespace : %s\n", n.Namespace)
-		fmt.Printf("n.DataAtom : %x\n", n.DataAtom)
-		fmt.Printf("n.Attribute: %v\n", n.Attr)
-		fmt.Printf("n.Data: %v\n", n.Data)
-
 		if n.Type == html.ElementNode {
 			for _, a := range n.Attr {
 				if a.Key == "href" || a.Key == "src" {
