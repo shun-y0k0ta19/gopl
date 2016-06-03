@@ -10,8 +10,12 @@ func main() {
 }
 
 func increment(x int) (y int) {
-	defer func() { recover() }()
-
-	y = x + 1
-	panic(y)
+	defer func() {
+		if p := recover(); p == x {
+			y = x + 1
+		} else {
+			panic(p)
+		}
+	}()
+	panic(x)
 }

@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 
@@ -12,7 +13,9 @@ import (
 
 func main() {
 	for _, url := range os.Args[1:] {
-		outline(url)
+		if err := outline(url); err != nil {
+			log.Print(err)
+		}
 	}
 }
 
@@ -69,6 +72,9 @@ func startElement(n *html.Node) {
 		}
 		fmt.Println(">")
 		depth++
+	}
+	if n.Type == html.TextNode {
+		fmt.Println(n.Data)
 	}
 }
 

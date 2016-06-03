@@ -137,7 +137,7 @@ func (s *IntSet) Copy() *IntSet {
 }
 
 //Elms returns slice of elements.
-func (s *IntSet) Elms() []uint64 {
+func (s *IntSet) Elms() []uint64 { //uint64ではなくintで返す
 	var elms []uint64
 	for i, word := range s.words {
 		if word == 0 {
