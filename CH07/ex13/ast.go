@@ -1,6 +1,6 @@
 // Copyright © 2016 "Shun Yokota" All rights reserved
 
-package main
+package eval
 
 // An Expr is an arithmetic expression.
 type Expr interface {
@@ -8,6 +8,8 @@ type Expr interface {
 	Eval(env Env) float64
 	// Check reports errors in this Expr and adds its Vars to the set.
 	Check(vars map[Var]bool) error
+
+	String() string
 }
 
 //!+ast
