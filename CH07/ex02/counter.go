@@ -4,6 +4,7 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 )
 
 //ByteCounter is number of byte count
@@ -21,37 +22,18 @@ func (c *ByteCounter) Write(p []byte) (int, error) {
 }
 
 func (wc *WordCounter) Write(p []byte) (int, error) {
-	var adsum int
-	for {
-		ad, token, err := bufio.ScanWords(p[adsum:], true)
-		if err != nil {
-			return 0, err
-		}
-		if len(token) > 0 {
-			*wc++
-		}
-
-		adsum += ad
-		if len(p[adsum:]) == 0 {
-			return int(*wc), nil
-		}
+	sc := bufio.NewScanner(bytes.NewReader(p))
+	sc.Split(bufio.ScanWords)
+	for sc.Scan() {
+		*wc++
 	}
+	return int(*wc), nil
 }
 
 func (lc *LineCounter) Write(p []byte) (int, error) {
-	var adsum int
-	for {
-		ad, token, err := bufio.ScanLines(p[adsum:], true)
-		if err != nil {
-			return 0, err
-		}
-		if len(token) > 0 {
-			*lc++
-		}
-
-		adsum += ad
-		if len(p[adsum:]) == 0 {
-			return int(*lc), nil
-		}
+	sc := bufio.NewScanner(bytes.NewReader(p))
+	for sc.Scan() {
+		*lc++
 	}
+	return int(*lc), nil
 }
