@@ -25,15 +25,20 @@ type Element struct {
 func main() {
 	dec := xml.NewDecoder(os.Stdin)
 	var temp Element
-
-	root := Element{Type: xml.Name{Space: "root", Local: "root"}, Attr: []xml.Attr{}, Children: []Node{}}
+	root := Element{Type: xml.Name{Space: "root", Local: "root"}, Attr: *new([]xml.Attr), Children: *new([]Node)}
 	stack := []Element{root}
 	i := 0
 	for {
+
 		i++
-		if i > 15 {
+		if i > 20 {
+			root = stack[0].Children[0].(Element)
+			fmt.Println(root.Children[0])
+			fmt.Println("Parse done!")
+
 			break
 		}
+
 		tok, err := dec.Token()
 		if err == io.EOF {
 			fmt.Println(stack[0].Type.Local)
@@ -49,11 +54,12 @@ func main() {
 		case xml.StartElement:
 			//fmt.Printf("len(stack): %d\n", len(stack))
 			fmt.Println(tok.Name.Local)
-			child := Element{Type: tok.Name, Attr: tok.Attr, Children: []Node{}}
-			fmt.Printf("stack[stlen-1].children: %v\n", stack[len(stack)-1].Children)
+			child := Element{Type: tok.Name, Attr: tok.Attr, Children: *new([]Node)}
+			fmt.Printf("child: %v\n", child)
 			stack[len(stack)-1].Children = append(stack[len(stack)-1].Children, child)
+			fmt.Printf("stack[%d].children: %v\n", len(stack)-1, stack[len(stack)-1].Children)
 			stack = append(stack, child)
-			fmt.Printf("sstack[].c[0]: %v\n", stack[0].Children[0])
+			fmt.Printf("sstack[0].c[0]: %v\n", stack[0].Children[0])
 
 			if len(stack) == 6 {
 				temp = stack[1]
@@ -68,7 +74,7 @@ func main() {
 			stack[len(stack)-1].Children = append(children, tok.Copy())
 		}
 	}
-	showChild(temp)
+	showChild(root)
 	//	showChild(stack[0])
 }
 
