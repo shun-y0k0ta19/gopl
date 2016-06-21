@@ -27,9 +27,8 @@ func main() {
 
 //NewReader is return io.Reader using s
 func NewReader(s string) *Reader {
-	var reader Reader
-	reader.Read([]byte(s))
-	return &reader
+	r := Reader(s)
+	return &r
 }
 
 func (r *Reader) Read(p []byte) (int, error) {
