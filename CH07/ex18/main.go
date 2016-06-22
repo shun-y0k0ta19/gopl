@@ -56,7 +56,7 @@ func main() {
 			stack = stack[:last]
 			root = stack[len(stack)-1]
 		case xml.CharData:
-			fmt.Println(string(tok.Copy()))
+			//fmt.Println(string(tok.Copy()))
 			stack[last].Children = append(stack[last].Children, tok.Copy())
 		}
 		fmt.Println()
