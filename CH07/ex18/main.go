@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"unicode"
 )
 
 //Node is node interface
@@ -57,7 +58,10 @@ func main() {
 			root = stack[len(stack)-1]
 		case xml.CharData:
 			//fmt.Println(string(tok.Copy()))
-			stack[last].Children = append(stack[last].Children, tok.Copy())
+			if !isAllSpace(string(tok)) {
+				stack[last].Children = append(stack[last].Children, CharData(tok.Copy()))
+			}
+			//fmt.Printf("[%s]\n", stack[last].Children[len(stack[last].Children)-1])
 		}
 		fmt.Println()
 	}
@@ -66,7 +70,17 @@ func main() {
 	//	showChild(stack[0])
 }
 
+func isAllSpace(s string) bool {
+	for _, r := range s {
+		if !unicode.IsSpace(r) {
+			return false
+		}
+	}
+	return true
+}
+
 func showChild(node Node) {
+	//fmt.Println(node.(type))
 	switch nn := node.(type) {
 	case Element:
 		fmt.Printf("<%s>\n", nn.Type.Local)
@@ -74,6 +88,10 @@ func showChild(node Node) {
 			showChild(c)
 		}
 	case CharData:
-		fmt.Printf("[%s]\n", nn)
+		fmt.Printf("%s\n", nn)
+	case nil:
+		fmt.Println("nil")
+	default:
+		fmt.Printf("default: %T\n", nn)
 	}
 }
