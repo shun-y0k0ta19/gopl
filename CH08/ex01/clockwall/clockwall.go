@@ -3,14 +3,18 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"io"
 	"log"
+	"net"
 	"os"
 	"strings"
 )
 
+//var times map[string]string
+
 func main() {
+	//times := make(map[string]string)
 	for _, arg := range os.Args[1:] {
 		timezoneAndURL := strings.Split(arg, "=")
 		timezone := timezoneAndURL[0]
@@ -18,19 +22,25 @@ func main() {
 		fmt.Printf("arg: %s\n", arg)
 		fmt.Printf("timeZone: %s\n", timezone)
 		fmt.Printf("url: %s\n", url)
-	}
-	/*
-		conn, err := net.Dial("tcp", "localhost:8010")
+		conn, err := net.Dial("tcp", url)
 		if err != nil {
-			log.Fatal(err)
+			log.Fatalln(err)
 		}
 		defer conn.Close()
-		mustCopy(os.Stdout, conn)
-	*/
+		go printTime(conn, timezone)
+	}
+	sc := bufio.NewScanner(os.Stdin)
+	for sc.Scan() {
+		if sc.Text() == "q" {
+			return
+		}
+	}
+
 }
 
-func mustCopy(dst io.Writer, src io.Reader) {
-	if _, err := io.Copy(dst, src); err != nil {
-		log.Fatal(err)
+func printTime(conn net.Conn, timezone string) {
+	connsc := bufio.NewScanner(conn)
+	for connsc.Scan() {
+		fmt.Printf("%s=%v\n", timezone, connsc.Text())
 	}
 }
