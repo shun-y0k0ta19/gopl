@@ -34,6 +34,10 @@ func broadcaster() {
 			}
 
 		case cli := <-entering:
+			cli.ch <- "menbers: "
+			for c := range clients {
+				cli.ch <- c.name
+			}
 			clients[cli] = true
 
 		case cli := <-leaving:
