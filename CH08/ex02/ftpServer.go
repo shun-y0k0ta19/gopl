@@ -36,8 +36,15 @@ func pwd() string {
 
 func passAuth(pass string, conn net.Conn) bool {
 	fmt.Println("in pathAuth")
-	fmt.Println(pass)
-	fmt.Fprintf(conn, "%d User %s logged in.\n", 230, user)
+	switch user {
+	case "root":
+		if pass != "root" {
+			fmt.Fprintln(conn, 530)
+			return false
+		}
+	default:
+	}
+	fmt.Fprintf(conn, "%d User %s logged in.\r\n", 230, user)
 	return true
 }
 
@@ -45,29 +52,49 @@ func userAuth(commandSc *bufio.Scanner, conn net.Conn) bool {
 	if commandSc.Scan() {
 		user = commandSc.Text()
 		fmt.Println(user)
-		if user != "anonymous" {
+		switch user {
+		case "anonymous", "root":
+			fmt.Fprintf(conn, "%d Please specify the password.\r\n", 331)
+			return true
+		default:
 			fmt.Fprintln(conn, 530)
 			return false
 		}
-		fmt.Fprintf(conn, "%d Please specify the password.\n", 331)
-		return true
 	}
 	return false
+}
+
+func cdPath(path string, conn net.Conn) {
+	err := os.Chdir(path)
+	fmt.Println(err)
+	if err != nil {
+		fmt.Fprintf(conn, "%d Failed to change directory.\r\n", 550)
+		return
+	}
+	fmt.Fprintf(conn, "%d Directory successfully changed.\r\n", 250)
 }
 
 func cd(commandSc *bufio.Scanner, conn net.Conn) {
 	if commandSc.Scan() {
 		path := commandSc.Text()
 		fmt.Println(path)
-		err := os.Chdir(path)
-		fmt.Println(err)
-		if err != nil {
-			fmt.Fprintf(conn, "%d Failed to change directory.\n", 550)
-			return
-		}
-		fmt.Fprintf(conn, "%d Directory successfully changed.\n", 250)
+		cdPath(path, conn)
 	}
+}
 
+func mkdir(commandSc *bufio.Scanner, conn net.Conn) {
+	for commandSc.Scan() {
+		path := commandSc.Text()
+		fmt.Println(path)
+		err := os.Mkdir(path, os.ModePerm)
+		if err != nil {
+			fmt.Fprintf(conn, "%d Failed to make directory \"%s\".\r\n", 550, path)
+			continue
+		}
+		//fmt.Fprintf(conn, "%d \"%s\" \r\n", 257, pwd())
+
+		fmt.Fprintf(conn, "%d \"%s\" successfully made.\r\n", 257, path)
+	}
 }
 
 func get(commandSc *bufio.Scanner, conn net.Conn, msg chan interface{}) {
@@ -77,17 +104,17 @@ func get(commandSc *bufio.Scanner, conn net.Conn, msg chan interface{}) {
 		fp, err := os.Open(path)
 		fmt.Println(err)
 		if err != nil {
-			fmt.Fprintf(conn, "%d Failed to open file(%s).\n", 550, err.Error())
+			fmt.Fprintf(conn, "%d Failed to open file(%s).\r\n", 550, err.Error())
 			return
 		}
-		fmt.Fprintf(conn, "%d Get %s.----------->\n", 150, path)
+		fmt.Fprintf(conn, "%d Get %s.----------->\r\n", 150, path)
 		sc := bufio.NewScanner(fp)
 		for sc.Scan() {
 			msg <- fmt.Sprintf("%s\r\n", sc.Text())
 		}
-		msg <- close{}
-		fmt.Fprintf(conn, "%d Closing data connection.\n", 226)
 	}
+	msg <- close{}
+	fmt.Fprintf(conn, "%d Closing data connection.\r\n", 226)
 
 }
 
@@ -127,18 +154,27 @@ func listName(entry os.FileInfo) interface{} {
 	return fmt.Sprintf("%s\r\n", entry.Name())
 }
 
-func list(conn net.Conn, msg chan interface{}, elist func(os.FileInfo) interface{}) {
-	entries, err := ioutil.ReadDir(pwd())
-	if err != nil {
-		fmt.Fprintln(conn, 450)
+func list(csc *bufio.Scanner, conn net.Conn, msg chan interface{}, elist func(os.FileInfo) interface{}) {
+	path := pwd()
+	if csc.Scan() {
+		t := csc.Text()
+		fmt.Println(t)
+		path = fmt.Sprintf("%s/%s", path, t)
 	}
-	fmt.Fprintf(conn, "%d Here comes the directory listing.\n", 150)
+	fmt.Println(path)
+	entries, err := ioutil.ReadDir(path)
+	if err != nil {
+		fmt.Fprintf(conn, "%d Requested file action not taken.\r\n", 450)
+		msg <- close{}
+		return
+	}
+	fmt.Fprintf(conn, "%d Here comes the directory listing.\r\n", 150)
 
 	for _, entry := range entries {
 		msg <- elist(entry)
 	}
 	msg <- close{}
-	fmt.Fprintf(conn, "%d Closing data connection.\n", 226)
+	fmt.Fprintf(conn, "%d Closing data connection.\r\n", 226)
 }
 
 //!+handleConn
@@ -155,7 +191,7 @@ func handleConn(conn net.Conn) {
 	}
 
 	//fmt.Println("start scan")
-	fmt.Fprintf(conn, "%d Golang FTP server Ready.\n", 220)
+	fmt.Fprintf(conn, "%d Golang FTP server Ready.\r\n", 220)
 	input := bufio.NewScanner(conn)
 
 ftpCon:
@@ -174,21 +210,29 @@ ftpCon:
 				break ftpCon
 			}
 		case "PASS":
-			if !passAuth(s[4:], conn) {
+			if !passAuth(s[5:], conn) {
 				break ftpCon
 			}
 		case "SYST":
-			fmt.Fprintf(conn, "%d UNIX\n", 215)
+			fmt.Fprintf(conn, "%d UNIX\r\n", 215)
 		case "FEAT":
-			fmt.Fprintf(conn, "%d no features\n", 211)
+			fmt.Fprintf(conn, "%d no features\r\n", 211)
 		case "PWD":
 			//fmt.Println("PWDda")
-			fmt.Fprintf(conn, "%d \"%s\" \n", 257, pwd())
+			fmt.Fprintf(conn, "%d \"%s\" \r\n", 257, pwd())
 			//fmt.Fprintf(conn, "%d\n", 250)
 		case "CWD":
 			cd(commandSc, conn)
+		case "CDUP":
+			cdPath("..", conn)
+		case "MKD":
+			if user != "root" {
+				fmt.Fprintf(conn, "%d Parmission denied.\r\n", 550)
+			} else {
+				mkdir(commandSc, conn)
+			}
 		case "EPSV":
-			fmt.Fprintf(conn, "%d EPSV is not supported.\n", 500)
+			fmt.Fprintf(conn, "%d EPSV is not supported.\r\n", 500)
 			//ls(commandSc, conn)
 		case "PASV":
 			go func() {
@@ -198,15 +242,15 @@ ftpCon:
 				}
 				handleDconn(dconn, msg)
 			}()
-			fmt.Fprintf(conn, "%d Entering Passive Mode %d,%d,%d,%d,%d,%d\n", 227, a1, a2, a3, a4, p1, p2)
+			fmt.Fprintf(conn, "%d Entering Passive Mode %d,%d,%d,%d,%d,%d\r\n", 227, a1, a2, a3, a4, p1, p2)
 		case "LIST":
-			list(conn, msg, listAll)
+			list(commandSc, conn, msg, listAll)
 		case "NLST":
-			list(conn, msg, listName)
+			list(commandSc, conn, msg, listName)
 		case "RETR":
 			get(commandSc, conn, msg)
 		case "QUIT":
-			fmt.Fprintf(conn, "%d See you again!\n", 221)
+			fmt.Fprintf(conn, "%d See you again!\r\n", 221)
 			break ftpCon
 		default:
 			fmt.Println("default")
