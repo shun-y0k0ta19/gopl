@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"net"
 	"os"
 	"strings"
@@ -18,11 +19,11 @@ const (
 	a2 = 0
 	a3 = 0
 	a4 = 1
-	p1 = 4
-	p2 = 255
 )
 
 var user string
+
+type close struct{}
 
 func pwd() string {
 	curDir, err := os.Getwd()
@@ -44,7 +45,7 @@ func userAuth(commandSc *bufio.Scanner, conn net.Conn) bool {
 	if commandSc.Scan() {
 		user = commandSc.Text()
 		fmt.Println(user)
-		if user != "root" {
+		if user != "anonymous" {
 			fmt.Fprintln(conn, 530)
 			return false
 		}
@@ -69,32 +70,100 @@ func cd(commandSc *bufio.Scanner, conn net.Conn) {
 
 }
 
+func get(commandSc *bufio.Scanner, conn net.Conn, msg chan interface{}) {
+	if commandSc.Scan() {
+		path := commandSc.Text()
+		fmt.Println(path)
+		fp, err := os.Open(path)
+		fmt.Println(err)
+		if err != nil {
+			fmt.Fprintf(conn, "%d Failed to open file(%s).\n", 550, err.Error())
+			return
+		}
+		fmt.Fprintf(conn, "%d Get %s.----------->\n", 150, path)
+		sc := bufio.NewScanner(fp)
+		for sc.Scan() {
+			msg <- fmt.Sprintf("%s\r\n", sc.Text())
+		}
+		msg <- close{}
+		fmt.Fprintf(conn, "%d Closing data connection.\n", 226)
+	}
+
+}
+
 func handleDconn(dconn net.Conn, msg chan interface{}) {
+	defer dconn.Close()
 	fmt.Println("start dconn")
 	for {
 		o := <-msg
 		switch data := o.(type) {
-		case os.FileInfo:
-			fmt.Println("entry print")
-			fmt.Fprintf(dconn, "%s\n", data.Name())
+		case string:
+			fmt.Fprintf(dconn, "%s", data)
+		case close:
+			return
 		}
 	}
+}
+
+func listenDataConn(port int) (net.Listener, error) {
+	dataConnURL := fmt.Sprintf("localhost:%d", port)
+	return net.Listen("tcp", dataConnURL)
+}
+
+func wordsScanner(s string) *bufio.Scanner {
+	commandSc := bufio.NewScanner(strings.NewReader(s))
+	commandSc.Split(bufio.ScanWords)
+	return commandSc
+}
+
+func listAll(entry os.FileInfo) interface{} {
+	modT := entry.ModTime()
+	dt := fmt.Sprintf("%02d %02d %02d:%02d", modT.Month(), modT.Day(), modT.Hour(), modT.Minute())
+	//fmt.Printf("%s %10d %s %s\n", data.Mode(), data.Size(), dt, data.Name())
+	return fmt.Sprintf("%s %10d %s %s\r\n", entry.Mode(), entry.Size(), dt, entry.Name())
+}
+
+func listName(entry os.FileInfo) interface{} {
+	return fmt.Sprintf("%s\r\n", entry.Name())
+}
+
+func list(conn net.Conn, msg chan interface{}, elist func(os.FileInfo) interface{}) {
+	entries, err := ioutil.ReadDir(pwd())
+	if err != nil {
+		fmt.Fprintln(conn, 450)
+	}
+	fmt.Fprintf(conn, "%d Here comes the directory listing.\n", 150)
+
+	for _, entry := range entries {
+		msg <- elist(entry)
+	}
+	msg <- close{}
+	fmt.Fprintf(conn, "%d Closing data connection.\n", 226)
 }
 
 //!+handleConn
 func handleConn(conn net.Conn) {
 	msg := make(chan interface{})
 
+	random := rand.New(rand.NewSource(int64(time.Now().Second())))
+	port := random.Intn(0xFFFF-1024) + 1024
+	p1 := port >> 8
+	p2 := port & 0xFF
+	data, err := listenDataConn(port)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	//fmt.Println("start scan")
 	fmt.Fprintf(conn, "%d Golang FTP server Ready.\n", 220)
 	input := bufio.NewScanner(conn)
+
 ftpCon:
 	for input.Scan() {
 		s := input.Text()
 		fmt.Println(s)
 		fmt.Println([]byte(s))
-		commandSc := bufio.NewScanner(strings.NewReader(s))
-		commandSc.Split(bufio.ScanWords)
+		commandSc := wordsScanner(s)
 		commandSc.Scan()
 		command := commandSc.Text()
 
@@ -122,37 +191,20 @@ ftpCon:
 			fmt.Fprintf(conn, "%d EPSV is not supported.\n", 500)
 			//ls(commandSc, conn)
 		case "PASV":
-			ch := make(chan struct{})
 			go func() {
-				data, err := net.Listen("tcp", "localhost:1279")
+				dconn, err := data.Accept()
 				if err != nil {
-					log.Fatal(err)
+					log.Print(err)
 				}
-				ch <- struct{}{}
-				for {
-					dconn, err := data.Accept()
-					if err != nil {
-						log.Print(err)
-						continue
-					}
-					go handleDconn(dconn, msg)
-				}
+				handleDconn(dconn, msg)
 			}()
-			<-ch
 			fmt.Fprintf(conn, "%d Entering Passive Mode %d,%d,%d,%d,%d,%d\n", 227, a1, a2, a3, a4, p1, p2)
 		case "LIST":
-			entries, err := ioutil.ReadDir(pwd())
-			if err != nil {
-				fmt.Fprintln(conn, 450)
-			}
-			fmt.Fprintln(conn, 150)
-
-			for _, entry := range entries {
-				msg <- entry
-			}
-
-		case "PORT":
-
+			list(conn, msg, listAll)
+		case "NLST":
+			list(conn, msg, listName)
+		case "RETR":
+			get(commandSc, conn, msg)
 		case "QUIT":
 			fmt.Fprintf(conn, "%d See you again!\n", 221)
 			break ftpCon
@@ -171,21 +223,11 @@ ftpCon:
 	conn.Close()
 }
 
-//!-handleConn
-
-//!+main
 func main() {
 	control, err := net.Listen("tcp", "localhost:21")
 	if err != nil {
 		log.Fatal(err)
 	}
-	/*
-		data, err := net.Listen("tcp", "localhost:8010")
-		if err != nil {
-			log.Fatal(err)
-		}
-	*/
-	//go broadcaster()
 	for {
 		conn, err := control.Accept()
 		if err != nil {
@@ -193,15 +235,5 @@ func main() {
 			continue
 		}
 		go handleConn(conn)
-		/*
-			dconn, err := data.Accept()
-			if err != nil {
-				log.Print(err)
-				continue
-			}
-			go handleConn(dconn)
-		*/
 	}
 }
-
-//!-main
