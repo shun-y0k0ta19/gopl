@@ -30,7 +30,7 @@ func main() {
 
 func palindrome(s sort.Interface) bool {
 	last := s.Len() - 1
-	for i := 0; i < last-i; i++ {
+	for i := 0; i < last/2; i++ {
 		if !equals(s, i, last-i) {
 			return false
 		}
@@ -39,5 +39,5 @@ func palindrome(s sort.Interface) bool {
 }
 
 func equals(s sort.Interface, i, j int) bool {
-	return !s.Less(i, j) && !s.Less(j, i)
+	return !(s.Less(i, j) || s.Less(j, i))
 }
