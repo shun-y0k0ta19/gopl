@@ -10,7 +10,6 @@ import (
 	"net"
 )
 
-//!+broadcaster
 type client struct {
 	ch   chan<- string // an outgoing message channel
 	name string
@@ -47,9 +46,6 @@ func broadcaster() {
 	}
 }
 
-//!-broadcaster
-
-//!+handleConn
 func handleConn(conn net.Conn) {
 	ch := make(chan string) // outgoing client messages
 	go clientWriter(conn, ch)
@@ -76,9 +72,6 @@ func clientWriter(conn net.Conn, ch <-chan string) {
 	}
 }
 
-//!-handleConn
-
-//!+main
 func main() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
@@ -95,5 +88,3 @@ func main() {
 		go handleConn(conn)
 	}
 }
-
-//!-main

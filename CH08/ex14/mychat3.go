@@ -68,25 +68,27 @@ func handleConn(conn net.Conn) {
 	entering <- client{ch, who}
 
 	tick := time.Tick(1 * time.Minute)
+	send := make(chan struct{})
 	closed := make(chan struct{})
-	countdown := make(chan int, 1)
-	countdown <- 0
 	go func() {
+		cd := 0
 		for {
-			<-tick
-			cd := <-countdown
-			if cd >= 5 {
-				conn.Close()
-				closed <- struct{}{}
+			select {
+			case <-tick:
+				cd++
+				if cd >= 5 {
+					conn.Close()
+					closed <- struct{}{}
+				}
+			case <-send:
+				cd = 0
 			}
-			countdown <- cd + 1
 		}
 	}()
 
 	for input.Scan() {
-		<-countdown
-		countdown <- 0
 		messages <- who + ": " + input.Text()
+		send <- struct{}{}
 	}
 	// NOTE: ignoring potential errors from input.Err()
 
