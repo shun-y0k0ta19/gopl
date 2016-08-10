@@ -26,9 +26,25 @@ func main() {
 		fmt.Println("png")
 		fmt.Println("gif")
 	}
-	if err := toJPEG(os.Stdin, os.Stdout); err != nil {
-		fmt.Fprintf(os.Stderr, "jpeg: %v\n", err)
-		os.Exit(1)
+	switch formatFlag {
+	case "jpeg":
+		if err := toJPEG(os.Stdin, os.Stdout); err != nil {
+			fmt.Fprintf(os.Stderr, "jpeg: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Fprintf(os.Stderr, "convert to JPEG\n")
+	case "png":
+		if err := toPNG(os.Stdin, os.Stdout); err != nil {
+			fmt.Fprintf(os.Stderr, "png: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Fprintf(os.Stderr, "convert to PNG\n")
+	case "gif":
+		if err := toGIF(os.Stdin, os.Stdout); err != nil {
+			fmt.Fprintf(os.Stderr, "gif: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Fprintf(os.Stderr, "convert to GIF\n")
 	}
 }
 
