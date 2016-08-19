@@ -33,19 +33,19 @@ func main() {
 			fmt.Fprintf(os.Stderr, "jpeg: %v\n", err)
 			os.Exit(1)
 		}
-		fmt.Fprintln(os.Stderr, "format to JPEG")
+		fmt.Fprintf(os.Stderr, "convert to JPEG\n")
 	case "png":
 		if err := toPNG(os.Stdin, os.Stdout); err != nil {
-			fmt.Fprintf(os.Stderr, "jpeg: %v\n", err)
+			fmt.Fprintf(os.Stderr, "png: %v\n", err)
 			os.Exit(1)
 		}
-		fmt.Fprintln(os.Stderr, "format to PNG")
+		fmt.Fprintf(os.Stderr, "convert to PNG\n")
 	case "gif":
 		if err := toGIF(os.Stdin, os.Stdout); err != nil {
-			fmt.Fprintf(os.Stderr, "jpeg: %v\n", err)
+			fmt.Fprintf(os.Stderr, "gif: %v\n", err)
 			os.Exit(1)
 		}
-		fmt.Fprintln(os.Stderr, "format to GIF")
+		fmt.Fprintf(os.Stderr, "convert to GIF\n")
 	}
 }
 
