@@ -6,6 +6,7 @@ import (
 	"bytes"
 	"fmt"
 	"reflect"
+	"strings"
 )
 
 // Marshal encodes a Go value in S-expression form.
@@ -51,15 +52,23 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 
 	case reflect.Array, reflect.Slice: // (value ...)
 		buf.WriteByte('(')
+		lines := bytes.Split(buf.Bytes(), []byte("\n"))
+		bcounts := len(lines[len(lines)-1]) - 1
+		arrayBuf := bytes.NewBuffer([]byte{})
 		for i := 0; i < v.Len(); i++ {
 			if i > 0 {
-				buf.WriteByte(' ')
+				arrayBuf.WriteByte(' ')
 			}
-			if err := encode(buf, v.Index(i)); err != nil {
+			if err := encode(arrayBuf, v.Index(i)); err != nil {
 				return err
 			}
+			if v.Type() == reflect.SliceOf(reflect.TypeOf("")) || v.Type() == reflect.ArrayOf(v.Len(), reflect.TypeOf("")) {
+				fmt.Fprintf(arrayBuf, "\n%s", strings.Repeat(" ", bcounts))
+			}
 		}
-		buf.WriteByte(')')
+		trim := bytes.TrimSpace(arrayBuf.Bytes())
+		arrayBuf = bytes.NewBuffer(trim)
+		fmt.Fprintf(buf, "%s)", arrayBuf)
 
 	case reflect.Struct: // ((name value) ...)
 		buf.WriteByte('(')
@@ -71,27 +80,32 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 			if err := encode(buf, v.Field(i)); err != nil {
 				return err
 			}
-			buf.WriteByte(')')
+			fmt.Fprintf(buf, ")\n")
 		}
-		buf.WriteByte(')')
+		buf = bytes.NewBuffer(bytes.TrimSpace(buf.Bytes()))
+		fmt.Fprintf(buf, ")")
 
 	case reflect.Map: // ((key value) ...)
 		buf.WriteByte('(')
+		lines := bytes.Split(buf.Bytes(), []byte("\n"))
+		bcounts := len(lines[len(lines)-1]) - 1
+		mapBuf := bytes.NewBuffer([]byte{})
 		for i, key := range v.MapKeys() {
 			if i > 0 {
-				buf.WriteByte(' ')
+				mapBuf.WriteByte(' ')
 			}
-			buf.WriteByte('(')
-			if err := encode(buf, key); err != nil {
+			mapBuf.WriteByte('(')
+			if err := encode(mapBuf, key); err != nil {
 				return err
 			}
-			buf.WriteByte(' ')
-			if err := encode(buf, v.MapIndex(key)); err != nil {
+			mapBuf.WriteByte(' ')
+			if err := encode(mapBuf, v.MapIndex(key)); err != nil {
 				return err
 			}
-			buf.WriteByte(')')
+			fmt.Fprintf(mapBuf, ")\n%s", strings.Repeat(" ", bcounts))
 		}
-		buf.WriteByte(')')
+		trim := bytes.TrimSpace(mapBuf.Bytes())
+		fmt.Fprintf(buf, "%s)", trim)
 
 	case reflect.Chan:
 		fmt.Fprintf(buf, "(%v)", v.Type())

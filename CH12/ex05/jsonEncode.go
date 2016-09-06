@@ -33,14 +33,11 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 	case reflect.Float32, reflect.Float64:
 		fmt.Fprintf(buf, "%v", v.Float())
 
-	case reflect.Complex64, reflect.Complex128:
-		fmt.Fprintf(buf, "#C(%v %v)", real(v.Complex()), imag(v.Complex()))
-
 	case reflect.Bool:
 		if v.Bool() {
-			fmt.Fprintf(buf, "t")
+			fmt.Fprintf(buf, "true")
 		} else {
-			fmt.Fprintf(buf, "nil")
+			fmt.Fprintf(buf, "false")
 		}
 
 	case reflect.String:
@@ -50,64 +47,53 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 		return encode(buf, v.Elem())
 
 	case reflect.Array, reflect.Slice: // (value ...)
-		buf.WriteByte('(')
+		buf.WriteByte('[')
 		for i := 0; i < v.Len(); i++ {
 			if i > 0 {
-				buf.WriteByte(' ')
+				buf.WriteByte(',')
 			}
 			if err := encode(buf, v.Index(i)); err != nil {
 				return err
 			}
 		}
-		buf.WriteByte(')')
+		buf.WriteByte(']')
 
 	case reflect.Struct: // ((name value) ...)
-		buf.WriteByte('(')
+		buf.WriteByte('{')
 		for i := 0; i < v.NumField(); i++ {
 			if i > 0 {
-				buf.WriteByte(' ')
+				buf.WriteByte(',')
 			}
-			fmt.Fprintf(buf, "(%s ", v.Type().Field(i).Name)
+			fmt.Fprintf(buf, "\"%s\":", v.Type().Field(i).Name)
 			if err := encode(buf, v.Field(i)); err != nil {
 				return err
 			}
-			buf.WriteByte(')')
 		}
-		buf.WriteByte(')')
+		fmt.Fprintf(buf, "}")
 
 	case reflect.Map: // ((key value) ...)
-		buf.WriteByte('(')
+		buf.WriteByte('{')
 		for i, key := range v.MapKeys() {
 			if i > 0 {
-				buf.WriteByte(' ')
+				buf.WriteByte(',')
 			}
-			buf.WriteByte('(')
 			if err := encode(buf, key); err != nil {
 				return err
 			}
-			buf.WriteByte(' ')
+			buf.WriteByte(':')
 			if err := encode(buf, v.MapIndex(key)); err != nil {
 				return err
 			}
-			buf.WriteByte(')')
 		}
-		buf.WriteByte(')')
-
-	case reflect.Chan:
-		fmt.Fprintf(buf, "(%v)", v.Type())
-
-	case reflect.Func:
-		fmt.Fprintf(buf, "(%v)", v.Type())
+		buf.WriteByte('}')
 
 	case reflect.Interface:
 		if v.IsNil() {
-			fmt.Fprintf(buf, "nil")
+			fmt.Fprintf(buf, "null")
 		} else {
-			fmt.Fprintf(buf, "(\"%v\" ", v.Elem().Type())
 			if err := encode(buf, v.Elem()); err != nil {
 				return err
 			}
-			fmt.Fprint(buf, ")")
 		}
 	default: //  func, interface
 		return fmt.Errorf("unsupported type: %s", v.Type())
