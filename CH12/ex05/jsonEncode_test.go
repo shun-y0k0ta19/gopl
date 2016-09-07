@@ -10,6 +10,28 @@ import (
 	"testing"
 )
 
+func TestUnMarshal(t *testing.T) {
+	type Movie struct {
+		Title, Subtitle string
+		Year            int
+	}
+	strangelove := Movie{
+		Title:    "Dr. Strangelove",
+		Subtitle: "How I Learned to Stop Worrying and Love the Bomb",
+		Year:     1964,
+	}
+	// Encode it
+	data, err := Marshal(strangelove)
+	if err != nil {
+		t.Fatalf("Marshal failed: %v", err)
+	}
+	var result Movie
+	json.Unmarshal(data, &result)
+	if strangelove != result {
+		t.Errorf("\nstrangelove: %v\nresult:      %v\n", strangelove, result)
+	}
+}
+
 func Test(t *testing.T) {
 
 	type Movie struct {
