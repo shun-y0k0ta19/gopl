@@ -5,32 +5,26 @@ package main
 
 import (
 	"fmt"
-	"golang_training/CH12/ex11/myparams"
+	"golang_training/CH12/ex12/myparams2"
 	"log"
 	"net/http"
 )
 
-//!+
-
 // search implements the /search URL endpoint.
 func search(resp http.ResponseWriter, req *http.Request) {
 	var data struct {
-		Labels     []string `http:"l"`
-		MaxResults int      `http:"max"`
-		Exact      bool     `http:"x"`
+		MailAddr         string `http:"maddr,mail"`
+		CreditCardNumber string `http:"ccn,credit"`
+		Zipcode          int    `http:"zc,zip"`
 	}
-	data.MaxResults = 10 // set default
-	if err := myparams.Unpack(req, &data); err != nil {
+	if err := myparams2.Unpack(req, &data); err != nil {
 		http.Error(resp, err.Error(), http.StatusBadRequest) // 400
 		return
 	}
 
 	// ...rest of handler...
 	fmt.Fprintf(resp, "Search: %+v\n", data)
-	fmt.Println(myparams.Pack("http://localhost:12345/search", &data))
 }
-
-//!-
 
 func main() {
 	http.HandleFunc("/search", search)

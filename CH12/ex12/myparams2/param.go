@@ -1,43 +1,16 @@
 // Copyright © 2016 "Shun Yokota" All rights reserved
 
-// Package myparams provides a reflection-based parser for URL parameters.
-package myparams
+// Package myparams2 provides a reflection-based parser for URL parameters.
+package myparams2
 
 import (
-	"bytes"
 	"fmt"
 	"net/http"
 	"reflect"
+	"regexp"
 	"strconv"
 	"strings"
 )
-
-// Pack returns URL created from data
-func Pack(url string, ptr interface{}) string {
-	buf := new(bytes.Buffer)
-	//buf.WriteByte('?')
-	//var ss []string
-
-	v := reflect.ValueOf(ptr).Elem() // the struct variable
-	for i := 0; i < v.NumField(); i++ {
-		fieldInfo := v.Type().Field(i) // a reflect.StructField
-		tag := fieldInfo.Tag           // a reflect.StructTag
-		name := tag.Get("http")
-		if name == "" {
-			name = strings.ToLower(fieldInfo.Name)
-		}
-		field := v.Field(i)
-		switch field.Kind() {
-		case reflect.Slice:
-			for i := 0; i < field.Len(); i++ {
-				fmt.Fprintf(buf, "&%s=%v", name, field.Index(i))
-			}
-		default:
-			fmt.Fprintf(buf, "&%s=%v", name, field)
-		}
-	}
-	return url + strings.Replace(buf.String(), "&", "?", 1)
-}
 
 // Unpack populates the fields of the struct pointed to by ptr
 // from the HTTP request parameters in req.
@@ -47,15 +20,18 @@ func Unpack(req *http.Request, ptr interface{}) error {
 	}
 
 	fields := make(map[string]reflect.Value)
+	options := make(map[string]string)
 	v := reflect.ValueOf(ptr).Elem() // the struct variable
 	for i := 0; i < v.NumField(); i++ {
 		fieldInfo := v.Type().Field(i) // a reflect.StructField
 		tag := fieldInfo.Tag           // a reflect.StructTag
-		name := tag.Get("http")
-		if name == "" {
-			name = strings.ToLower(fieldInfo.Name)
+		tagName := tag.Get("http")
+		if tagName == "" {
+			tagName = strings.ToLower(fieldInfo.Name)
 		}
-		fields[name] = v.Field(i)
+		names := strings.Split(tagName, ",")
+		options[names[0]] = names[1]
+		fields[names[0]] = v.Field(i)
 	}
 	// Update struct field for each parameter in the request.
 	for name, values := range req.Form {
@@ -64,6 +40,25 @@ func Unpack(req *http.Request, ptr interface{}) error {
 			continue // ignore unrecognized HTTP parameters
 		}
 		for _, value := range values {
+			switch options[name] {
+			case "mail":
+				r := regexp.MustCompile(`^(?i:[^ @"<>]+|".*")@(?i:[a-z1-9.])+.(?i:[a-z])+$`)
+				if !r.Match([]byte(value)) {
+					return fmt.Errorf("%s is not correct e-mail address", value)
+				}
+			case "credit":
+				r := regexp.MustCompile(`^4[0-9]{12}(?:[0-9]{3})?$`)
+				if !r.Match([]byte(value)) {
+					return fmt.Errorf("%s is not correct creditcard number", value)
+				}
+
+			case "zip":
+				r := regexp.MustCompile(`^\d{5}(?:[-\s]\d{4})?$`)
+				if !r.Match([]byte(value)) {
+					return fmt.Errorf("%s is not correct zipcode", value)
+				}
+
+			}
 			if f.Kind() == reflect.Slice {
 				elem := reflect.New(f.Type().Elem()).Elem()
 				if err := populate(elem, value); err != nil {

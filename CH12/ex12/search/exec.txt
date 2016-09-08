@@ -1,0 +1,9 @@
+go build
+go build gopl.io/ch1/fetch
+./search &
+./fetch 'http://localhost:12345/search?maddr=example@gmail.com&ccn=4980015105862555&zc=77005'
+./fetch 'http://localhost:12345/search?maddr=example'
+./fetch 'http://localhost:12345/search?ccn=897fa'
+./fetch 'http://localhost:12345/search?zc=324'
+
+
