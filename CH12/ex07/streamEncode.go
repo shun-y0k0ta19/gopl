@@ -117,12 +117,6 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 		}
 		buf.WriteByte(')')
 
-	case reflect.Chan:
-		fmt.Fprintf(buf, "(%v)", v.Type())
-
-	case reflect.Func:
-		fmt.Fprintf(buf, "(%v)", v.Type())
-
 	case reflect.Interface:
 		if v.IsNil() {
 			fmt.Fprintf(buf, "nil")

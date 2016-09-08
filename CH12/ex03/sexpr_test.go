@@ -3,9 +3,7 @@
 package sexpr
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 	"testing"
 )
 
@@ -55,36 +53,27 @@ func Test(t *testing.T) {
 	fmt.Printf("Marshal() = %s\n", data)
 
 	data, err = Marshal(make(chan<- string))
-	if err != nil {
+	if err == nil {
 		t.Fatalf("Marshal failed: %v", err)
 	}
-	t.Logf("Marshal() = %s\n", data)
-	fmt.Printf("Marshal() = %s\n", data)
+	t.Logf("Marshal() = %s\n", err)
+	fmt.Printf("Marshal() = %s\n", err)
 
 	f := encode
 	data, err = Marshal(f)
-	if err != nil {
+	if err == nil {
 		t.Fatalf("Marshal failed: %v", err)
 	}
-	t.Logf("Marshal() = %s\n", data)
-	fmt.Printf("Marshal() = %s\n", data)
-
-	//w := bufio.NewWriter(os.Stdin)
-	//r := bufio.NewReader(os.Stdout)
-	sc := bufio.NewScanner(os.Stdin)
-	data, err = Marshal(sc)
-	if err != nil {
-		t.Fatalf("Marshal failed: %v", err)
-	}
-	t.Logf("Marshal() = %s\n", data)
-	fmt.Printf("Marshal() = %s\n", data)
+	t.Logf("Marshal() = %s\n", err)
+	fmt.Printf("Marshal() = %s\n", err)
 
 	type hogeif interface {
 	}
 	type ifStruct struct {
 		hogeif
 	}
-	hg := ifStruct{[]int{1, 2, 3}}
+	type intS []int
+	hg := ifStruct{intS{1, 2, 3}}
 	data, err = Marshal(hg)
 	if err != nil {
 		t.Fatalf("Marshal failed: %v", err)

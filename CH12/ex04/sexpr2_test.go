@@ -59,18 +59,18 @@ func Test(t *testing.T) {
 	fmt.Printf("Marshal() = %s\n", data)
 
 	data, err = Marshal(make(chan<- string))
-	if err != nil {
+	if err == nil {
 		t.Fatalf("Marshal failed: %v", err)
 	}
-	t.Logf("Marshal() = %s\n", data)
-	fmt.Printf("Marshal() = %s\n", data)
+	t.Logf("Marshal() = %s\n", err)
+	fmt.Printf("Marshal() = %s\n", err)
 
 	f := encode
 	data, err = Marshal(f)
-	if err != nil {
+	if err == nil {
 		t.Fatalf("Marshal failed: %v", err)
 	}
-	t.Logf("Marshal() = %s\n", data)
-	fmt.Printf("Marshal() = %s\n", data)
+	t.Logf("Marshal() = %s\n", err)
+	fmt.Printf("Marshal() = %s\n", err)
 
 }
