@@ -8,6 +8,7 @@ import (
 	"sort"
 )
 
+// MapIntSet is intset
 type MapIntSet map[int]bool
 
 // Has reports whether the set contains the non-negative value x.
