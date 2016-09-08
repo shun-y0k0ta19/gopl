@@ -39,23 +39,6 @@ func Pack(url string, ptr interface{}) string {
 	return url + strings.Replace(buf.String(), "&", "?", 1)
 }
 
-func createFields(ptr interface{}) map[string]reflect.Value {
-	// Build map of fields keyed by effective name.
-	fields := make(map[string]reflect.Value)
-	v := reflect.ValueOf(ptr).Elem() // the struct variable
-	for i := 0; i < v.NumField(); i++ {
-		fieldInfo := v.Type().Field(i) // a reflect.StructField
-		tag := fieldInfo.Tag           // a reflect.StructTag
-		name := tag.Get("http")
-		if name == "" {
-			name = strings.ToLower(fieldInfo.Name)
-		}
-		fields[name] = v.Field(i)
-		fmt.Printf("name: %s\nfields[%[1]s]: %v\n", name, fields[name])
-	}
-	return fields
-}
-
 // Unpack populates the fields of the struct pointed to by ptr
 // from the HTTP request parameters in req.
 func Unpack(req *http.Request, ptr interface{}) error {
