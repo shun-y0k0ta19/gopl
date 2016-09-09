@@ -119,8 +119,7 @@ func checkCircle(x reflect.Value, seen objInfoSet) bool {
 	if !x.IsValid() {
 		return false
 	}
-	if !x.CanAddr() {
-	} else {
+	if x.CanAddr() {
 		objinfo := objInfo{unsafe.Pointer(x.UnsafeAddr()), x.Type()}
 		if _, ok := seen[objinfo]; ok {
 			return true
