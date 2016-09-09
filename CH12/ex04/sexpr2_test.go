@@ -41,7 +41,7 @@ func Test(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Marshal failed: %v", err)
 	}
-	t.Logf("Marshal() = %s\n", data)
+	t.Logf("Marshal() = \n%s\n", data)
 	fmt.Printf("Marshal() = \n%s\n", data)
 
 	data, err = Marshal(0.0123)
