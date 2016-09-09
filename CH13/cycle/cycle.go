@@ -6,10 +6,11 @@ import "fmt"
 
 func main() {
 	type S []S
-	s := make(S, 1, 10)
+	s := make(S, 0, 1)
+	fmt.Printf("%p\n", s)
 	s = append(s, s)
 	fmt.Println(len(s))
-	fmt.Printf("%p %p %p\n", s, s[0], s[0][0])
+	fmt.Printf("%p %d\n", s, s[0])
 	fmt.Println(s)
 	/*
 		type CycleSlice []CycleSlice
