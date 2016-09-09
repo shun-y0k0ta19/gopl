@@ -28,7 +28,7 @@ func Pack(url string, ptr interface{}) string {
 		}
 		field := v.Field(i)
 		switch field.Kind() {
-		case reflect.Slice:
+		case reflect.Slice, reflect.Array:
 			for i := 0; i < field.Len(); i++ {
 				fmt.Fprintf(buf, "&%s=%v", name, field.Index(i))
 			}
