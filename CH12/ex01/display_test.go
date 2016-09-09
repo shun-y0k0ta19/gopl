@@ -155,36 +155,39 @@ func Example_Map() {
 		"ddd": "fff",
 	}
 	Display("akm", akm)
+	// Unordered Output:
 	// Display akm (map[string]string):
 	// akm["aaa"] = "ccc"
 	// akm["ddd"] = "fff"
 }
 
-func TestArrayKeyMap(t *testing.T) {
+func ExampleArrayKeyMap() {
 	akm := map[[2]string]string{
 		[2]string{"aaa", "bbb"}: "ccc",
 		[2]string{"ddd", "eee"}: "fff",
 	}
 	Display("akm", akm)
+	// Unordered Output:
 	// Display akm (map[[2]string]string):
 	// akm["aaa", "bbb"] = "ccc"
 	// akm["ddd", "eee"] = "fff"
 }
 
-type keyStruct struct {
-	name string
-	val  int
-}
+func ExampleStructKeyMap() {
+	type keyStruct struct {
+		name string
+		val  int
+	}
 
-func TestStructKeyMap(t *testing.T) {
-	akm := map[keyStruct]string{
+	skm := map[keyStruct]string{
 		keyStruct{name: "aaa", val: 1}: "ccc",
 		keyStruct{name: "bbb", val: 2}: "fff",
 	}
-	Display("akm", akm)
-	// Display akm (map[[2]string]string):
-	// akm["aaa", "bbb"] = "ccc"
-	// akm["ddd", "eee"] = "fff"
+	Display("skm", skm)
+	// Unordered Output:
+	// Display skm (map[display.keyStruct]string):
+	// skm[name: "aaa", val: 1] = "ccc"
+	// skm[name: "bbb", val: 2] = "fff"
 }
 
 // This test ensures that the program terminates without crashing.
