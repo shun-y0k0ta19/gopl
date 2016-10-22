@@ -1,2 +1,2 @@
-# golang_training
-golang traning
+# gopl
+gopl is exercise for http://gopl.io 
