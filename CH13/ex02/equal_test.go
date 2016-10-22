@@ -105,6 +105,12 @@ func TestCycle(t *testing.T) {
 	var cycleSlice CycleSlice
 	cycleSlice = make(CycleSlice, 1)
 	cycleSlice[0] = cycleSlice
+	cyclicStruct := struct{ i interface{} }{}
+	cyclicStruct.i = &cyclicStruct
+
+	var is []interface{}
+	is = append(is, cyclePtr1)
+	is = append(is, cyclePtr1)
 
 	var iface1 interface{} = &one
 
@@ -137,6 +143,7 @@ func TestCycle(t *testing.T) {
 		{[...]int{1, 2, 3}, false},
 		// interfaces
 		{&iface1, false},
+		{cyclicStruct, true},
 	} {
 		if CheckCircle(test.x) != test.want {
 			t.Errorf("CheckCircle(%v) = %t",
