@@ -26,3 +26,7 @@ func (l *LimitedReader) Read(p []byte) (int, error) {
 	l.n -= int64(n)
 	return n, err
 }
+
+func main() {
+
+}

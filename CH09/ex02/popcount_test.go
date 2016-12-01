@@ -3,14 +3,9 @@
 
 package popcount
 
-import (
-	"sync"
-	"testing"
-)
+import "testing"
 
 // -- Alternative implementations --
-
-var initOnce sync.Once
 
 func BitCount(x uint64) int {
 	// Hacker's Delight, Figure 5-2.

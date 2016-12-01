@@ -10,7 +10,7 @@ type Expr interface {
 	Check(vars map[Var]bool) error
 
 	String() string
-	Extractor
+	//Extractor
 }
 
 //!+ast
