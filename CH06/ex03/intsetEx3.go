@@ -52,7 +52,7 @@ func (s *IntSet) IntersectWith(t *IntSet) {
 		if i < len(s.words) {
 			s.words[i] &= tword
 		} else {
-			s.words[i] = 0
+			s.words = append(s.words, 0)
 		}
 	}
 }
